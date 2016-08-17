@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% block body %}
+<html>
+  <head>
+    <title>Say Quotes Created</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDajWFzCNwZBG-FDQmNt_nEco0VQGJ7QA0&sensor=true">
+    </script>
+    <script type="text/javascript">
+    var chicago = new google.maps.LatLng(41.878247, -87.629767);
+    var springfield = new google.maps.LatLng(39.7817, -89.6501);
+	var addresses = [
+	{% for geo in geocodes %}
+			new google.maps.LatLng({{geo.lat}}, {{geo.lng}}),
+	{% endfor %}
+    ];
+
+	var names = [
+	{% for geo in geocodes %}
+			'{{geo.name}}',
+	{% endfor %}
+	];
+
+	var markers = [];
+	var iterator = 0;
+	var map;
+	function initialize() {
+		var mapOptions = {
+			zoom: 7,
+			center: springfield
+		};
+		map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+
+		//addMarker();
+		drop();
+	}
+	function drop() {
+		for (var i = 0; i < addresses.length; i++) {
+			setTimeout(function() {
+				addMarker();
+			}, i );
+		}
+	}
+	function addMarker() {
+		markers.push(new google.maps.Marker({
+			position: addresses[iterator],
+			map:map,
+			draggable:false,
+			//animation: google.maps.Animation.DROP,
+			title: names[iterator]
+		}));
+		iterator++;
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <h1>Say Quotes Created</h1>
+    <div id="map-canvas"/>
+  </body>
+</html>
+{% endblock %}
