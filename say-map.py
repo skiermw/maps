@@ -10,6 +10,7 @@ app.config.from_object(__name__)
 
 # configuration
 QUOTE_QUERY = "MATCH (q:Quote) RETURN q.applicant AS applicant, q.lat AS lat, q.lng AS lng"
+QUOTE_CT_QUERY = "MATCH (q:Quote) RETURN COUNT(q) AS total"
 
 global graph
 
@@ -18,12 +19,14 @@ global graph
 def show_map():
 
     graph = Graph()
+    total = [result.total for result in graph.cypher.stream(QUOTE_CT_QUERY)]
+
     lat_lng_query = graph.cypher.execute(QUOTE_QUERY)
     print(lat_lng_query)
 
-    geocodes = [dict(name=result.applicant, lat=result.lat, lng=result.lng) for result in graph.cypher.stream(QUERY)]
+    geocodes = [dict(name=result.applicant, lat=result.lat, lng=result.lng) for result in graph.cypher.stream(QUOTE_QUERY)]
 
-    return render_template('show_say.html', geocodes=geocodes)
+    return render_template('show_say.html', geocodes=geocodes, total=total)
 
 
 if __name__ == '__main__':

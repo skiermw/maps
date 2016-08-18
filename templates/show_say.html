@@ -53,7 +53,7 @@
 			position: addresses[iterator],
 			map:map,
 			draggable:false,
-			//animation: google.maps.Animation.DROP,
+			animation: google.maps.Animation.DROP,
 			title: names[iterator]
 		}));
 		iterator++;
@@ -63,7 +63,7 @@
     </script>
   </head>
   <body>
-    <h1>Say Quotes Created</h1>
+    <h1>Say Quotes Created: {{total}}</h1>
     <div id="map-canvas"/>
   </body>
 </html>

@@ -16,11 +16,11 @@ def main():
     credentials = pika.PlainCredentials('RabbitMQAdmin','T3NpCYI7lW6x2O84I120dS')
 
     connection = pika.BlockingConnection(pika.ConnectionParameters(
-            host = 'patrmq1', virtual_host='/',
+            host = 'pamrmq1', virtual_host='/',
             credentials=credentials))
 
     channel = connection.channel()
-    queue_name = 'bi'
+    queue_name = 'test_q'
     global count
     count = 0
     #result = channel.queue_declare(queue=queue_name)
@@ -37,9 +37,12 @@ def main():
         #print(body)
         count = count + 1
         json_data = json.loads(body)
-        if json_data['type'] == 'events.quote.QuoteCreated':
-            print(json_data['event']['quote']['address']['city'])
-            write_node(json_data)
+        if hasattr(json_data, 'type'):
+            if json_data['type'] == 'events.quote.QuoteCreated':
+                print(json_data['event']['quote']['address']['city'])
+                write_quote_node(json_data)
+            elif json_data['type'] == 'events.policy.PolicyCreated':
+                write_policy_node(json_data)
         #outfile.write(body)
         if count > 1000:
             exit()
@@ -50,7 +53,7 @@ def main():
 
     channel.start_consuming()
 
-def write_node(json_data):
+def write_quote_node(json_data):
     id = json_data['event']['quote']['id']
     lat = json_data['event']['quote']['address']['latitude']
     lng = json_data['event']['quote']['address']['longitude']
@@ -62,6 +65,17 @@ def write_node(json_data):
 
     quote_node.push()
 
+def write_policy_node(json_data):
+    id = json_data['event']['policy']['id']
+    lat = json_data['event']['policy']['address']['latitude']
+    lng = json_data['event']['policy']['address']['longitude']
+    applicant = json_data['event']['quote']['applicant']['lastName']
+    policy_node = graph.merge_one("Policy", "id", id)
+    policy_node['lat'] = lat
+    policy_node['lng'] = lng
+    policy_node['applicant'] = applicant
+
+    policy_node.push()
 # Start program
 if __name__ == "__main__":
    main()
