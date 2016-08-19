@@ -1,0 +1,51 @@
+{
+	"authority": {
+		"clientSystemId": "customer-front-end"
+	},
+	"effectiveTimestamp": "2016-08-16T15:52:14.682Z",
+	"event": {
+		"@class": "events.quote.QuoteCreated",
+		"id": "82bc1cb89acc4bffbdb15ac8a2ffe670",
+		"quote": {
+			"address": {
+				"city": "Warsaw",
+				"county": "Hancock",
+				"countyFIPS": "17067",
+				"id": "30ce4932d65d40eba8a5235174435dc9",
+				"latitude": 40.27917,
+				"longitude": -91.30012,
+				"state": "IL",
+				"street": "1091 E County Road 550",
+				"zip": "62379-3212"
+			},
+			"applicant": {
+				"age": 20,
+				"birthDate": "1996-01-01",
+				"clientId": "42358",
+				"firstName": "Afayfay",
+				"id": "275db3e9388041dca1c5ab29175406e6",
+				"lastName": "Ozigzig"
+			},
+			"channelOfOrigin": "PublicWebsite",
+			"documentDeliveryMethod": "Email",
+			"drivers": [{
+				"age": 20,
+				"birthDate": "1996-01-01",
+				"clientId": "42358",
+				"firstName": "Afayfay",
+				"id": "275db3e9388041dca1c5ab29175406e6",
+				"lastName": "Ozigzig"
+			}],
+			"effectiveDate": "2016-08-16T15:52:12.478Z",
+			"id": "5c33c2d52c784558846b944988241814",
+			"prefillReferenceNumber": "16229151401980",
+			"status": "Active",
+			"vehicles": []
+		}
+	},
+	"streamId": "5c33c2d52c784558846b944988241814",
+	"streamRevision": 1,
+	"timestamp": "2016-08-16T15:52:14.682Z",
+	"type": "events.quote.QuoteCreated",
+	"version": "1.0"
+}

@@ -11,23 +11,38 @@ app.config.from_object(__name__)
 # configuration
 QUOTE_QUERY = "MATCH (q:Quote) RETURN q.applicant AS applicant, q.lat AS lat, q.lng AS lng"
 QUOTE_CT_QUERY = "MATCH (q:Quote) RETURN COUNT(q) AS total"
+POLICY_QUERY = "MATCH (q:Policy) RETURN q.applicant AS applicant, q.lat AS lat, q.lng AS lng"
+POLICY_CT_QUERY = "MATCH (q:Policy) RETURN COUNT(q) AS total"
 
 global graph
 
 
 @app.route('/')
-def show_map():
+@app.route('/quote')
+def show_quote():
 
     graph = Graph()
     total = [result.total for result in graph.cypher.stream(QUOTE_CT_QUERY)]
 
-    lat_lng_query = graph.cypher.execute(QUOTE_QUERY)
-    print(lat_lng_query)
+    #lat_lng_query = graph.cypher.execute(QUOTE_QUERY)
+    #print(lat_lng_query)
 
     geocodes = [dict(name=result.applicant, lat=result.lat, lng=result.lng) for result in graph.cypher.stream(QUOTE_QUERY)]
 
-    return render_template('show_say.html', geocodes=geocodes, total=total)
+    return render_template('show_quotes.html', geocodes=geocodes, total=total)
 
+@app.route('/policy')
+def show_policy():
+
+    graph = Graph()
+    total = [result.total for result in graph.cypher.stream(POLICY_CT_QUERY)]
+
+    #lat_lng_query = graph.cypher.execute(QUOTE_QUERY)
+    #print(lat_lng_query)
+
+    geocodes = [dict(name=result.applicant, lat=result.lat, lng=result.lng) for result in graph.cypher.stream(POLICY_QUERY)]
+
+    return render_template('show_policies.html', geocodes=geocodes, total=total)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555)

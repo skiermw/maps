@@ -1,0 +1,429 @@
+{
+	"authority": {
+		"clientSystemId": "customer-front-end"
+	},
+	"effectiveTimestamp": "2016-08-25T06:01:00.000Z",
+	"event": {
+		"@class": "events.policy.PolicyCreated",
+		"id": "2f914bb499334f279d20453980848bee",
+		"ipAddress": "10.0.2.2",
+		"paymentMethod": "EFT",
+		"policy": {
+			"additionalListedInsureds": [],
+			"address": {
+				"city": "Warsaw",
+				"county": "Hancock",
+				"countyFIPS": "17067",
+				"id": "09e55e636e7b4dbb888a03ba3dfd191d",
+				"latitude": 40.27917,
+				"longitude": -91.30012,
+				"state": "IL",
+				"street": "1091 E County Road 550",
+				"zip": "62379-3212"
+			},
+			"applicant": {
+				"age": 38,
+				"birthDate": "1978-03-10",
+				"clientId": "90480",
+				"creditReport": {
+					"id": "a738093e927e4b6ba305e30bb406ae50",
+					"reasons": [],
+					"referenceNumber": "16231131400756",
+					"status": "NoHit"
+				},
+				"firstName": "Uzag",
+				"gender": "Male",
+				"id": "84bdb840bbee4f48a37af7632913b9c9",
+				"lastName": "Erafomonzigshomraf",
+				"maritalStatus": "Single",
+				"phoneType": "Mobile",
+				"ssn": "*******"
+			},
+			"channelOfOrigin": "PublicWebsite",
+			"company": "ShelterGeneral",
+			"compositeDriverRatingFactorWithPoints": 1.018,
+			"compositeDriverRatingFactorWithoutPoints": 0.96,
+			"coverages": [],
+			"discounts": [{
+				"id": "f8d06b1e191e4d95a3ec1f394fa14f54",
+				"type": "EvidenceOfPriorInsurance"
+			},
+			{
+				"id": "1647c8575aa245cdb3789f1a333b8fb3",
+				"type": "AdvancePurchase"
+			},
+			{
+				"id": "373b3980fab94ca49397c27a4f5ba8e6",
+				"type": "ElectronicDelivery"
+			}],
+			"documentDeliveryMethod": "Email",
+			"drivers": [{
+				"age": 38,
+				"birthDate": "1978-03-10",
+				"claimsAdverseAction": false,
+				"clientId": "90480",
+				"creditReport": {
+					"id": "a738093e927e4b6ba305e30bb406ae50",
+					"reasons": [],
+					"referenceNumber": "16231131400756",
+					"status": "NoHit"
+				},
+				"drivingRecord": {
+					"claims": [],
+					"clueReferenceNumber": "16231131800860",
+					"id": "58cc9e6479b043389e3c711484841d7d",
+					"mvrOrderedDate": "2016-08-18T13:51:36.925Z",
+					"mvrStatus": "HIT",
+					"suspensions": [],
+					"violations": [{
+						"code": "311FH",
+						"convictionDate": "2016-01-02",
+						"effectiveDate": "2016-08-25T06:01:00.000Z",
+						"id": "424c4b871e6444048491e9a57204ca7b",
+						"severity": "Minor",
+						"violationDate": "2015-11-20"
+					}]
+				},
+				"firstName": "Uzag",
+				"gender": "Male",
+				"id": "84bdb840bbee4f48a37af7632913b9c9",
+				"lastName": "Erafomonzigshomraf",
+				"licenseExpiration": "2017-12-31",
+				"licenseIssued": "2013-12-28",
+				"licenseNumber": "B50080763372",
+				"licenseState": "IL",
+				"licenseStatus": "Valid",
+				"maritalStatus": "Single",
+				"phoneType": "Mobile",
+				"ssn": "*******",
+				"violationPoints": 3,
+				"violationsAdverseAction": true
+			}],
+			"effectiveDate": "2016-08-25T06:01:00.000Z",
+			"evidenceOfPriorInsurance": true,
+			"expirationDate": "2017-02-25T06:01:00.000Z",
+			"familyNumber": "000011997",
+			"fcraNoticeRequired": false,
+			"firstPolicyEffectiveDate": "2016-08-25T06:01:00.000Z",
+			"firstPolicySubmissionDate": "2016-08-18T13:52:32.283Z",
+			"flyers": ["DNI-1000.1",
+			"DNI-1001.1"],
+			"forms": ["DPA-0001.2",
+			"DPA-0020.2",
+			"DPA-0100.1",
+			"DPA-0140",
+			"DPA-0160.1",
+			"DPA-0180.1",
+			"DPA-0400.2",
+			"DPA-0600",
+			"DPA-0603.1",
+			"DIL-7999"],
+			"id": "e0c738161fd245578339f4fd3f638a92",
+			"lineOfBusiness": "JA",
+			"namedInsureds": [{
+				"age": 38,
+				"birthDate": "1978-03-10",
+				"clientId": "90480",
+				"creditReport": {
+					"id": "a738093e927e4b6ba305e30bb406ae50",
+					"reasons": [],
+					"referenceNumber": "16231131400756",
+					"status": "NoHit"
+				},
+				"firstName": "Uzag",
+				"gender": "Male",
+				"id": "84bdb840bbee4f48a37af7632913b9c9",
+				"lastName": "Erafomonzigshomraf",
+				"maritalStatus": "Single",
+				"phoneType": "Mobile",
+				"ssn": "*******"
+			}],
+			"nonDescribedVehicle": {
+				"coverages": [{
+					"id": "fa084cf228364db8824a1a202d5eaa27",
+					"limits": [{
+						"id": "0ff6ad973c61465eb84f4232aa3ac4a3",
+						"type": "PerPerson",
+						"value": 2000
+					}],
+					"type": "MedicalPayments"
+				},
+				{
+					"id": "0c2c6df9c41843da893e2e1bf42f8173",
+					"limits": [{
+						"id": "a6191cd3e3ef43198e2fc45537b23723",
+						"type": "PerOccurrence",
+						"value": 50000
+					}],
+					"type": "PropertyDamage"
+				},
+				{
+					"id": "39a39c4101a44f718c6e354dedb4abe1",
+					"limits": [{
+						"id": "fc24e97b9e704beebc8b2da45c7e073f",
+						"type": "PerOccurrence",
+						"value": 100000
+					},
+					{
+						"id": "89ed270953124e5384982d2d81d43552",
+						"type": "PerPerson",
+						"value": 50000
+					}],
+					"type": "UninsuredMotorist"
+				},
+				{
+					"id": "3f03c2d622a1439394378d339f8f5364",
+					"limits": [{
+						"id": "f059afe13bdd441aba1b3baaca3d0274",
+						"type": "PerPerson",
+						"value": 50000
+					},
+					{
+						"id": "20b7156ffa064378817758ad5220f41f",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "725f280874464f719efdbcfbe27ecfe9",
+					"limits": [{
+						"id": "35d6c7958a424f26b3430bce5a633fae",
+						"type": "Deductible",
+						"value": 500
+					}],
+					"type": "Collision"
+				},
+				{
+					"id": "817f353c5a4b4c00b09f7c0cc0885a5b",
+					"limits": [{
+						"id": "3de025d42622460cab00ea1dc1a8ae15",
+						"type": "Deductible",
+						"value": 500
+					}],
+					"type": "Comprehensive"
+				}],
+				"id": "76569eac6f224291a631147587a33b46",
+				"permissiveUserCoverages": [{
+					"id": "700200ae085f438a9b076c901404e238",
+					"limits": [{
+						"id": "52197d6b9716453eba8a76bb6786844e",
+						"type": "PerPerson",
+						"value": 50000
+					},
+					{
+						"id": "1d422ed06cf74edc98a119a4a9cc2828",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "e911b8375953409bb7698e82886a82da",
+					"limits": [{
+						"id": "2918e015a2c94fa99d2a805d1fa3b663",
+						"type": "PerOccurrence",
+						"value": 50000
+					}],
+					"type": "PropertyDamage"
+				}]
+			},
+			"notices": [],
+			"paymentPlan": "M6",
+			"policyNumber": "000065876",
+			"renewableStatus": "Renewable",
+			"revision": 1,
+			"revisionTimestamp": "2016-08-25T06:01:00.000Z",
+			"status": "Pending",
+			"term": 6,
+			"territory": "12",
+			"totalDiscount": 210.74,
+			"totalPremium": 566.96,
+			"vehicles": [{
+				"antiTheftDevice": false,
+				"businessUse": "NonBusinessUse",
+				"costSymbol": "041",
+				"coverages": [{
+					"id": "9fcd1f31b5954c7d8c635b56c683fcd1",
+					"limits": [{
+						"id": "3b2ec62547484c90a4bf0c6b9550d596",
+						"type": "Deductible",
+						"value": 500
+					}],
+					"premium": 223.05,
+					"type": "Collision"
+				},
+				{
+					"id": "f7ac3878c2954898ad1cb6e9ff5c4abb",
+					"limits": [{
+						"id": "d887344a5678437d86fdbf82ec94e77b",
+						"type": "PerPerson",
+						"value": 2000
+					}],
+					"premium": 11.14,
+					"type": "MedicalPayments"
+				},
+				{
+					"id": "5efe68b7bb944a72b078354f3391d401",
+					"limits": [{
+						"id": "cc2c019fcc6349b2a682956ead382a60",
+						"type": "PerDay",
+						"value": 40
+					}],
+					"premium": 8.73,
+					"type": "RentalReimbursement"
+				},
+				{
+					"id": "1c90cd34969d4993a2693fd4faf86a6c",
+					"limits": [{
+						"id": "64edbda605dd4dde9e5a05aa633dba8f",
+						"type": "PerOccurrence",
+						"value": 50000
+					}],
+					"premium": 52.48,
+					"type": "PropertyDamage"
+				},
+				{
+					"id": "791eff7a64b4468b9630a9271e838827",
+					"limits": [{
+						"id": "e122c29f29fd4c6ea20155f4aa946409",
+						"type": "PerOccurrence",
+						"value": 100
+					}],
+					"premium": 0.00,
+					"type": "RoadsideAssistance"
+				},
+				{
+					"id": "cb7836937d554c8485df886a8a91ef98",
+					"limits": [{
+						"id": "0e7ca6750f824fc89e2759b2023db055",
+						"type": "PerOccurrence",
+						"value": 100000
+					},
+					{
+						"id": "3bc543e559b0461385070f56dff3f417",
+						"type": "PerPerson",
+						"value": 50000
+					}],
+					"premium": 17.72,
+					"type": "UninsuredMotorist"
+				},
+				{
+					"id": "50348c1646314c149f23a5551fbfad8e",
+					"limits": [{
+						"id": "02ce20257c854c8f9cc143c9c7799288",
+						"type": "PerPerson",
+						"value": 50000
+					},
+					{
+						"id": "a9554c6844ec4ffdb000ef2ac941b8d1",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"premium": 107.53,
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "5712d3e2e1554a32a67cc6716ec13de4",
+					"limits": [{
+						"id": "803695febac14ea38286a3566d5d62ee",
+						"type": "Deductible",
+						"value": 500
+					}],
+					"premium": 146.31,
+					"type": "Comprehensive"
+				}],
+				"id": "1dcad77b150148b5a310ec1308a2b999",
+				"make": "Nissan",
+				"model": "Murano",
+				"ownership": "Owned",
+				"permissiveUserCoverages": [{
+					"id": "93a65a1776964b70865a0b2eb7b0ad9f",
+					"limits": [{
+						"id": "0a16cafdf8524891ad7fca35abc7d614",
+						"type": "PerPerson",
+						"value": 50000
+					},
+					{
+						"id": "132012ba8a4f482db2d54e32951074ee",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "2620e5a08fb84a0b9ec4147755bdc15c",
+					"limits": [{
+						"id": "49d3ad16546f4be09b4be2e65a2fba9c",
+						"type": "PerOccurrence",
+						"value": 50000
+					}],
+					"type": "PropertyDamage"
+				}],
+				"pseudoVin": " N  Z2MH",
+				"sequence": 1,
+				"trim": "Platinum AWD 4dr",
+				"trimCode": "4",
+				"vin": "5N1AZ2MH0FN274666",
+				"year": 2015
+			}]
+		},
+		"quoteId": "ce94e2f1ecd54c489a9a0383e854fcf2",
+		"recurringPaymentToken": "45266"
+	},
+	"streamId": "e0c738161fd245578339f4fd3f638a92",
+	"streamRevision": 1,
+	"timestamp": "2016-08-18T13:52:32.386Z",
+	"type": "events.policy.PolicyCreated",
+	"version": "1.0",
+	"writtenPremiumAdded": {
+		"totalPremium": 566.96,
+		"vehicles": [{
+			"coverages": [{
+				"id": "9fcd1f31b5954c7d8c635b56c683fcd1",
+				"premium": 223.05,
+				"type": "Collision"
+			},
+			{
+				"id": "f7ac3878c2954898ad1cb6e9ff5c4abb",
+				"premium": 11.14,
+				"type": "MedicalPayments"
+			},
+			{
+				"id": "5efe68b7bb944a72b078354f3391d401",
+				"premium": 8.73,
+				"type": "RentalReimbursement"
+			},
+			{
+				"id": "1c90cd34969d4993a2693fd4faf86a6c",
+				"premium": 52.48,
+				"type": "PropertyDamage"
+			},
+			{
+				"id": "791eff7a64b4468b9630a9271e838827",
+				"premium": 0.00,
+				"type": "RoadsideAssistance"
+			},
+			{
+				"id": "cb7836937d554c8485df886a8a91ef98",
+				"premium": 17.72,
+				"type": "UninsuredMotorist"
+			},
+			{
+				"id": "50348c1646314c149f23a5551fbfad8e",
+				"premium": 107.53,
+				"type": "BodilyInjury"
+			},
+			{
+				"id": "5712d3e2e1554a32a67cc6716ec13de4",
+				"premium": 146.31,
+				"type": "Comprehensive"
+			}],
+			"id": "1dcad77b150148b5a310ec1308a2b999",
+			"sequence": 1
+		}]
+	},
+	"writtenPremiumRemoved": {
+		"totalPremium": 0.00
+	}
+}

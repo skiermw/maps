@@ -1,0 +1,412 @@
+{
+	"authority": {
+		"clientSystemId": "customer-front-end"
+	},
+	"effectiveTimestamp": "2016-08-19T17:55:54.031Z",
+	"event": {
+		"@class": "events.policy.PolicyCreated",
+		"id": "dbf7f0e5ba4249e28b0915a3a06e8c5f",
+		"ipAddress": "10.40.1.185",
+		"paymentMethod": "CREDIT_CARD",
+		"policy": {
+			"additionalListedInsureds": [],
+			"address": {
+				"city": "Poplar Grove",
+				"county": "Boone",
+				"countyFIPS": "17007",
+				"id": "4d425bc12021429c852ce83c799b0690",
+				"latitude": 42.34633,
+				"longitude": -88.86837,
+				"state": "IL",
+				"street": "2010 Candlewick Dr SW",
+				"zip": "61065-9077"
+			},
+			"applicant": {
+				"age": 24,
+				"birthDate": "1991-09-06",
+				"clientId": "474",
+				"creditReport": {
+					"id": "16db33939bc54bd4a2e05a7f92f663ba",
+					"reasons": [{
+						"code": "0125",
+						"description": "% OF BALANCE TO CREDIT LIMIT FOR OPEN BANK REVOLVING ACCOUNTS",
+						"id": "a50704e5421e42aaaf2c7940ec262283"
+					},
+					{
+						"code": "0133",
+						"description": "LENGTH OF TIME BANK REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED",
+						"id": "15cde8c2e1a24418afd98f195aec3a45"
+					},
+					{
+						"code": "0122",
+						"description": "# OF OPEN VEHICLE RELATED ACCOUNTS",
+						"id": "2d844539af21435ba36aa8016bc3936e"
+					},
+					{
+						"code": "0117",
+						"description": "# OF ACCOUNTS OPENED IN LAST 24 MONTHS",
+						"id": "690b799496454fc19b41104dce2e84f4"
+					}],
+					"referenceNumber": "16232151316917",
+					"score": 774,
+					"status": "Scored"
+				},
+				"firstName": "Justin",
+				"gender": "Male",
+				"id": "7892b9d76681492bb316ce974203236b",
+				"lastName": "Masse",
+				"maritalStatus": "Single",
+				"phoneType": "Mobile"
+			},
+			"channelOfOrigin": "PublicWebsite",
+			"company": "ShelterGeneral",
+			"compositeDriverRatingFactorWithPoints": 1.30,
+			"compositeDriverRatingFactorWithoutPoints": 1.30,
+			"coverages": [],
+			"discounts": [{
+				"id": "fdb51fed55d145edb5e7493212e5f412",
+				"type": "ElectronicDelivery"
+			},
+			{
+				"id": "858ed299b2e1436eb13b7a811dc39e9a",
+				"type": "EvidenceOfPriorInsurance"
+			}],
+			"documentDeliveryMethod": "Email",
+			"drivers": [{
+				"age": 24,
+				"birthDate": "1991-09-06",
+				"claimsAdverseAction": false,
+				"clientId": "474",
+				"creditReport": {
+					"id": "16db33939bc54bd4a2e05a7f92f663ba",
+					"reasons": [{
+						"code": "0125",
+						"description": "% OF BALANCE TO CREDIT LIMIT FOR OPEN BANK REVOLVING ACCOUNTS",
+						"id": "a50704e5421e42aaaf2c7940ec262283"
+					},
+					{
+						"code": "0133",
+						"description": "LENGTH OF TIME BANK REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED",
+						"id": "15cde8c2e1a24418afd98f195aec3a45"
+					},
+					{
+						"code": "0122",
+						"description": "# OF OPEN VEHICLE RELATED ACCOUNTS",
+						"id": "2d844539af21435ba36aa8016bc3936e"
+					},
+					{
+						"code": "0117",
+						"description": "# OF ACCOUNTS OPENED IN LAST 24 MONTHS",
+						"id": "690b799496454fc19b41104dce2e84f4"
+					}],
+					"referenceNumber": "16232151316917",
+					"score": 774,
+					"status": "Scored"
+				},
+				"drivingRecord": {
+					"claims": [],
+					"clueReferenceNumber": "16232151717542",
+					"id": "43a1592ee2ca47bbae765b1adff54681",
+					"mvrOrderedDate": "2016-08-19T17:55:05.885Z",
+					"mvrStatus": "CLEAR",
+					"suspensions": [],
+					"violations": [{
+						"code": "08120",
+						"effectiveDate": "2016-08-19T17:55:54.031Z",
+						"id": "a7044018a8374fb4a5af5b4eff06b16b"
+					}]
+				},
+				"firstName": "Justin",
+				"gender": "Male",
+				"id": "7892b9d76681492bb316ce974203236b",
+				"lastName": "Masse",
+				"licenseNumber": "M20042191254",
+				"licenseState": "IL",
+				"licenseStatus": "Unavailable",
+				"maritalStatus": "Single",
+				"phoneType": "Mobile",
+				"violationPoints": 0,
+				"violationsAdverseAction": false
+			}],
+			"effectiveDate": "2016-08-19T17:55:54.031Z",
+			"evidenceOfPriorInsurance": true,
+			"expirationDate": "2017-02-19T06:01:00.000Z",
+			"familyNumber": "000000110",
+			"fcraNoticeRequired": false,
+			"firstPolicyEffectiveDate": "2016-08-19T17:55:54.031Z",
+			"firstPolicySubmissionDate": "2016-08-19T17:55:54.031Z",
+			"flyers": ["DNI-1000.1",
+			"DNI-1001.1"],
+			"forms": ["DPA-0001.2",
+			"DPA-0020.2",
+			"DPA-0100.1",
+			"DPA-0140",
+			"DPA-0400.2",
+			"DPA-0603.1",
+			"DIL-7999"],
+			"id": "d9e1a42922184d788d28ee9f8bd320ea",
+			"lineOfBusiness": "JA",
+			"namedInsureds": [{
+				"age": 24,
+				"birthDate": "1991-09-06",
+				"clientId": "474",
+				"creditReport": {
+					"id": "16db33939bc54bd4a2e05a7f92f663ba",
+					"reasons": [{
+						"code": "0125",
+						"description": "% OF BALANCE TO CREDIT LIMIT FOR OPEN BANK REVOLVING ACCOUNTS",
+						"id": "a50704e5421e42aaaf2c7940ec262283"
+					},
+					{
+						"code": "0133",
+						"description": "LENGTH OF TIME BANK REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED",
+						"id": "15cde8c2e1a24418afd98f195aec3a45"
+					},
+					{
+						"code": "0122",
+						"description": "# OF OPEN VEHICLE RELATED ACCOUNTS",
+						"id": "2d844539af21435ba36aa8016bc3936e"
+					},
+					{
+						"code": "0117",
+						"description": "# OF ACCOUNTS OPENED IN LAST 24 MONTHS",
+						"id": "690b799496454fc19b41104dce2e84f4"
+					}],
+					"referenceNumber": "16232151316917",
+					"score": 774,
+					"status": "Scored"
+				},
+				"firstName": "Justin",
+				"gender": "Male",
+				"id": "7892b9d76681492bb316ce974203236b",
+				"lastName": "Masse",
+				"maritalStatus": "Single",
+				"phoneType": "Mobile"
+			}],
+			"nonDescribedVehicle": {
+				"coverages": [{
+					"id": "dbf3339a29ef4c039fb86d95548f40d8",
+					"limits": [{
+						"id": "7359d176843848b0a94b60a450a1fd6d",
+						"type": "PerPerson",
+						"value": 2000
+					}],
+					"type": "MedicalPayments"
+				},
+				{
+					"id": "3e3ef240de4746dfb4f1835f462e2284",
+					"limits": [{
+						"id": "31591261d24c45bc8b642a0542504833",
+						"type": "PerOccurrence",
+						"value": 300000
+					},
+					{
+						"id": "37142bd328fb4f8a91d40824144596e3",
+						"type": "PerPerson",
+						"value": 100000
+					}],
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "0d21c29b9baf4d24866437f95de2098a",
+					"limits": [{
+						"id": "7da085eabaf84d65ab71c9ba82d16610",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"type": "PropertyDamage"
+				},
+				{
+					"id": "b02fd0088c90448a9e4bf4e1efd3cbe0",
+					"limits": [{
+						"id": "5c8deae0d2494ff79a975e6f43f8985b",
+						"type": "PerPerson",
+						"value": 100000
+					},
+					{
+						"id": "3d807fc1d3354422954e3aae45e38426",
+						"type": "PerOccurrence",
+						"value": 300000
+					}],
+					"type": "UninsuredMotorist"
+				}],
+				"id": "e31153ebddf6472899be06502014461c",
+				"permissiveUserCoverages": [{
+					"id": "6bb0766d8d7d4f5589af6014a0fba7f1",
+					"limits": [{
+						"id": "e410de0407004825bf4a4e9b443f2a7b",
+						"type": "PerOccurrence",
+						"value": 300000
+					},
+					{
+						"id": "cd9fa950c32140adada30f6ec57b0c20",
+						"type": "PerPerson",
+						"value": 100000
+					}],
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "88fd6c4a979a48a7a22449fbb733286e",
+					"limits": [{
+						"id": "7b65ef693af74413b5786fb04f63f022",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"type": "PropertyDamage"
+				}]
+			},
+			"notices": [],
+			"paymentPlan": "M6",
+			"policyNumber": "000000228",
+			"renewableStatus": "Renewable",
+			"revision": 1,
+			"revisionTimestamp": "2016-08-19T17:55:54.031Z",
+			"status": "Active",
+			"term": 6,
+			"territory": "17",
+			"totalDiscount": 71.04,
+			"totalPremium": 302.68,
+			"vehicles": [{
+				"antiTheftDevice": false,
+				"businessUse": "NonBusinessUse",
+				"costSymbol": "013",
+				"coverages": [{
+					"id": "222fad6ef2f841c78e393591d2a86a95",
+					"limits": [{
+						"id": "d8967d7c4d644eabbbedb1574abcd409",
+						"type": "PerPerson",
+						"value": 2000
+					}],
+					"premium": 17.25,
+					"type": "MedicalPayments"
+				},
+				{
+					"id": "837bd78ef43e40c581ee18823eb774d9",
+					"limits": [{
+						"id": "3828fd77cb4046afbca9a065022bba35",
+						"type": "PerOccurrence",
+						"value": 300000
+					},
+					{
+						"id": "75e6f57c32d048898b94baaf4320640a",
+						"type": "PerPerson",
+						"value": 100000
+					}],
+					"premium": 171.26,
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "a501810651004d1998536ba0d306f1a8",
+					"limits": [{
+						"id": "4e9f07e03d5241f5b910b2c7e86e2e44",
+						"type": "PerOccurrence",
+						"value": 100
+					}],
+					"premium": 0.00,
+					"type": "RoadsideAssistance"
+				},
+				{
+					"id": "f61e17a9c6a04e7193051fce1957c357",
+					"limits": [{
+						"id": "bb385e704be4426cbd89a6139af69c75",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"premium": 79.68,
+					"type": "PropertyDamage"
+				},
+				{
+					"id": "ef2ca6b2ae5b42508a856bfb7a7e0e96",
+					"limits": [{
+						"id": "1c1b82171d284b7283de3f4e7a8f2ab1",
+						"type": "PerPerson",
+						"value": 100000
+					},
+					{
+						"id": "eff846b44f86467fb5744b160662bda5",
+						"type": "PerOccurrence",
+						"value": 300000
+					}],
+					"premium": 34.49,
+					"type": "UninsuredMotorist"
+				}],
+				"id": "d32e949fa3c04fcbae8c590145a24a10",
+				"make": "Chevrolet",
+				"model": "Aveo",
+				"ownership": "Owned",
+				"permissiveUserCoverages": [{
+					"id": "e8423e5a7c304e579e424f77bec36aed",
+					"limits": [{
+						"id": "b8f8dc11b76f4a6c9604d904fcaa44f6",
+						"type": "PerOccurrence",
+						"value": 300000
+					},
+					{
+						"id": "b580ceef518141b2a278aa9fceafcd4d",
+						"type": "PerPerson",
+						"value": 100000
+					}],
+					"type": "BodilyInjury"
+				},
+				{
+					"id": "3d8133e06ab34d0ba620c40525ed4a6b",
+					"limits": [{
+						"id": "ef4f66454bf14032867a2788f9f217e4",
+						"type": "PerOccurrence",
+						"value": 100000
+					}],
+					"type": "PropertyDamage"
+				}],
+				"previouslyInsured": true,
+				"pseudoVin": "  1TD5  ",
+				"sequence": 1,
+				"trim": "LS 4dr",
+				"trimCode": "1",
+				"vin": "KL1TD56688B024774",
+				"year": 2008
+			}]
+		},
+		"quoteId": "c46a7c1d57bf4af2904a90b4fe67b73c",
+		"recurringPaymentToken": "699"
+	},
+	"streamId": "d9e1a42922184d788d28ee9f8bd320ea",
+	"streamRevision": 1,
+	"timestamp": "2016-08-19T17:55:53.061Z",
+	"type": "events.policy.PolicyCreated",
+	"version": "1.0",
+	"writtenPremiumAdded": {
+		"totalPremium": 302.68,
+		"vehicles": [{
+			"coverages": [{
+				"id": "222fad6ef2f841c78e393591d2a86a95",
+				"premium": 17.25,
+				"type": "MedicalPayments"
+			},
+			{
+				"id": "837bd78ef43e40c581ee18823eb774d9",
+				"premium": 171.26,
+				"type": "BodilyInjury"
+			},
+			{
+				"id": "a501810651004d1998536ba0d306f1a8",
+				"premium": 0.00,
+				"type": "RoadsideAssistance"
+			},
+			{
+				"id": "f61e17a9c6a04e7193051fce1957c357",
+				"premium": 79.68,
+				"type": "PropertyDamage"
+			},
+			{
+				"id": "ef2ca6b2ae5b42508a856bfb7a7e0e96",
+				"premium": 34.49,
+				"type": "UninsuredMotorist"
+			}],
+			"id": "d32e949fa3c04fcbae8c590145a24a10",
+			"sequence": 1
+		}]
+	},
+	"writtenPremiumRemoved": {
+		"totalPremium": 0.00
+	}
+}
