@@ -1,7 +1,7 @@
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
 
-from py2neo import Graph, neo4j
+from py2neo import Graph, neo4j, authenticate
 import collections
 
 # create our little application :)
@@ -20,7 +20,7 @@ global graph
 @app.route('/')
 @app.route('/quote')
 def show_quote():
-
+    authenticate("localhost:7474", "neo4j", "hyenas")
     graph = Graph()
     total = [result.total for result in graph.cypher.stream(QUOTE_CT_QUERY)]
 
@@ -33,7 +33,7 @@ def show_quote():
 
 @app.route('/policy')
 def show_policy():
-
+    authenticate("localhost:7474", "neo4j", "hyenas")
     graph = Graph()
     total = [result.total for result in graph.cypher.stream(POLICY_CT_QUERY)]
 
@@ -45,5 +45,5 @@ def show_policy():
     return render_template('show_policies.html', geocodes=geocodes, total=total)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5555)
+    app.run(debug=True, port=5555)
 	#app.run()
