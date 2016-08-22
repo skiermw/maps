@@ -63,6 +63,7 @@ def write_policy_node(graph, json_data):
     policy_node['totalPremium'] = json_data['event']['policy']['totalPremium']
     policy_node['id'] = json_data['event']['policy']['id']
     policy_node['channelOfOrigin'] = json_data['event']['policy']['channelOfOrigin']
+    policy_node['quoteId'] = json_data['event']['quoteId']
 
     policy_node.push()
 
@@ -84,20 +85,39 @@ def write_policy_node(graph, json_data):
     results = graph.create_unique(Relationship(applicant_node, "APPLICANT_OF", policy_node))
 
 def write_vehicle_node(graph, vehicle_data):
-    print('Writing Vehicle')
+    print('   Writing Vehicle')
 
     vehicle_node = graph.merge_one("Vehicle", "vin", vehicle_data['vin'])
     vehicle_node['make'] = vehicle_data['make']
     vehicle_node['model'] = vehicle_data['model']
     vehicle_node['year'] = vehicle_data['year']
+    vehicle_node['trim'] = vehicle_data['trim']
     vehicle_node['ownership'] = vehicle_data['ownership']
+    vehicle_node['antiTheftDevice'] = vehicle_data['antiTheftDevice']
+    vehicle_node['businessUse'] = vehicle_data['businessUse']
+    vehicle_node['costSymbol'] = vehicle_data['costSymbol']
 
     vehicle_node.push()
-
+    for coverage in vehicle_data['coverages']:
+        coverage_node = write_coverage_node(graph, coverage)
+        results = graph.create_unique(Relationship(coverage_node, "COVERS", vehicle_node))
     return vehicle_node
 
+def write_coverage_node(graph, coverage_data):
+    print('      Writing Coverage')
+
+    coverageId = coverage_data['id']
+    coverage_node = graph.merge_one("Coverage", "coverageId", coverageId)
+    coverage_node['type'] = coverage_data['type']
+    coverage_node['premium'] = coverage_data['premium']
+    coverage_node['limitType'] = coverage_data['limits'][0]['type']
+    coverage_node['limitValue'] = coverage_data['limits'][0]['value']
+    coverage_node.push()
+
+    return coverage_node
+
 def write_person_node(graph, person_data):
-    print('Writing Person')
+    print('   Writing Person')
 
     clientId = person_data['clientId']
     person_node = graph.merge_one("Person", "clientId", clientId)
@@ -107,5 +127,20 @@ def write_person_node(graph, person_data):
     person_node['lastName'] = person_data['lastName']
     person_node.push()
 
+    # See if this is a Driver
+    if 'drivingRecord' in person_data:
+        for violation in person_data['drivingRecord']['violations']:
+            violation_node = write_violation_node(graph, violation)
+            results = graph.create_unique(Relationship(person_node, "HAS_VIOLATION", violation_node))
     return person_node
 
+def write_violation_node(graph, violation_data):
+    print('      Writing Violation')
+    print(violation_data)
+    violationKey = violation_data['code']+ violation_data['effectiveDate']
+    violation_node = graph.merge_one("Violation", "violationKey", violationKey)
+    violation_node['code'] = violation_data['code']
+    violation_node['effectiveDate'] = violation_data['effectiveDate']
+    violation_node.push()
+
+    return violation_node

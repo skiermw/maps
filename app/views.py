@@ -44,10 +44,9 @@ def mapview():
         lng=-88.9936904907,
         markers=quote_markers,
         zoom=7,
-        cluster=True,
-        cluster_gridsize=9,
         style= "height:600px;width:800,px;margin:0;"
     )
+
     policy_markers = []
     policy_geocodes = get_policies()
     total_policies = len(policy_geocodes)
@@ -65,8 +64,6 @@ def mapview():
         lng=-88.9936904907,
         markers=policy_markers,
         zoom=7,
-        cluster=True,
-        cluster_gridsize=9,
         style= "height:600px;width:800,px;margin:0;"
     )
     return render_template('maps.html',
@@ -74,6 +71,32 @@ def mapview():
                            policymap=policymap,
                            total_policies=total_policies,
                            total_quotes=total_quotes)
+
+@app.route('/policy')
+def policy():
+
+    policy_markers = []
+    policy_geocodes = get_policies()
+    total_policies = len(policy_geocodes)
+    for geocode in policy_geocodes:
+        marker = {
+            'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+            'lat': geocode['lat'],
+            'lng': geocode['lng'],
+            'infobox': "<b>" + geocode['name'] + "</b>"
+        }
+        policy_markers.append(marker)
+    policymap = Map(
+        identifier="policy",
+        lat=40.4842033386,
+        lng=-88.9936904907,
+        markers=policy_markers,
+        zoom=7,
+        style= "height:600px;width:800,px;margin:0;"
+    )
+    return render_template('policy.html',
+                           policymap=policymap,
+                           total_policies=total_policies)
 
 
 def get_quotes():

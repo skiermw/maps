@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <html>
+    <head>
+            {{policymap.js}}
+    </head>
+    <div class="container">
+  <div class="row">
+     <div class="col-sm-8">
+      <h2> Policy Map</h2>
+        <h3> Total Policies {{ total_policies }}</h3>
+      <p>  {{policymap.html}}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
