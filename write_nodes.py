@@ -1,33 +1,6 @@
-#!/usr/bin/env python
-import boto3
-import json
-import write_nodes
 from py2neo import Graph, Relationship, authenticate
 
-def main():
-    global graph
-    authenticate("localhost:7474", "neo4j", "hyenas")
-    graph = Graph()
-    print(graph.uri)
-
-    s3 = boto3.resource('s3')
-
-    bucket = s3.Bucket('say-bi-prod')
-    for item in bucket.objects.all():
-        if 'BI_Messages_2016-08-22/' in item.key:
-            #msg_file = item.get()['Body'].read()
-            msg_file = item.get()['Body']
-            print(msg_file)
-            json_data = json.load(msg_file)
-            #json_data = msg_file
-            if 'type' in json_data:
-                if json_data['type'] == 'events.quote.QuoteCreated':
-                    write_nodes.write_quote_node(graph, json_data)
-                elif json_data['type'] == 'events.policy.PolicyCreated':
-                    write_nodes.write_policy_node(graph, json_data)
-
-'''
-def write_quote_node(json_data):
+def write_quote_node(graph, json_data):
     print('Writing Quote')
     id = json_data['event']['quote']['id']
     lat = json_data['event']['quote']['address']['latitude']
@@ -38,13 +11,13 @@ def write_quote_node(json_data):
     quote_node['lat'] = lat
     quote_node['lng'] = lng
     quote_node.push()
-    address_node = write_address_node(json_data['event']['quote']['address'])
+    address_node = write_address_node(graph, json_data['event']['quote']['address'])
     results = graph.create_unique(Relationship(quote_node, "LOCATED_AT", address_node))
 
-    applicant_node = write_person_node(json_data['event']['quote']['applicant'])
+    applicant_node = write_person_node(graph, json_data['event']['quote']['applicant'])
     results = graph.create_unique(Relationship(applicant_node, "APPLICANT_OF", quote_node))
 
-def write_address_node(address):
+def write_address_node(graph, address):
     print('   Writing Address')
     lat = address['latitude']
     lng = address['longitude']
@@ -70,7 +43,7 @@ def write_address_node(address):
     return address_node
 
 
-def write_policy_node(json_data):
+def write_policy_node(graph, json_data):
     print('Writing Policy')
     id = json_data['event']['policy']['id']
     ip = json_data['event']['ipAddress']
@@ -94,23 +67,23 @@ def write_policy_node(json_data):
     policy_node.push()
 
     for driver in json_data['event']['policy']['drivers']:
-        driver_node = write_person_node(driver)
+        driver_node = write_person_node(graph, driver)
         results = graph.create_unique(Relationship(driver_node, "DRIVER_OF", policy_node))
 
     for vehicle in json_data['event']['policy']['vehicles']:
-        vehicle_node = write_vehicle_node(vehicle)
+        vehicle_node = write_vehicle_node(graph, vehicle)
         results = graph.create_unique(Relationship(vehicle_node, "COVERED_BY", policy_node))
 
     ip_node = graph.merge_one("IP", "ipAddress", ip)
     results = graph.create_unique(Relationship(policy_node, "CREATED_FROM", ip_node))
 
-    address_node = write_address_node(json_data['event']['policy']['address'])
+    address_node = write_address_node(graph, json_data['event']['policy']['address'])
     results = graph.create_unique(Relationship(policy_node, "LOCATED_AT", address_node))
 
-    applicant_node = write_person_node(json_data['event']['policy']['applicant'])
+    applicant_node = write_person_node(graph, json_data['event']['policy']['applicant'])
     results = graph.create_unique(Relationship(applicant_node, "APPLICANT_OF", policy_node))
 
-def write_vehicle_node(vehicle_data):
+def write_vehicle_node(graph, vehicle_data):
     print('Writing Vehicle')
 
     vehicle_node = graph.merge_one("Vehicle", "vin", vehicle_data['vin'])
@@ -123,7 +96,7 @@ def write_vehicle_node(vehicle_data):
 
     return vehicle_node
 
-def write_person_node(person_data):
+def write_person_node(graph, person_data):
     print('Writing Person')
 
     clientId = person_data['clientId']
@@ -136,7 +109,3 @@ def write_person_node(person_data):
 
     return person_node
 
-'''
-# Start program
-if __name__ == "__main__":
-   main()

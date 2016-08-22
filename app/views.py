@@ -27,9 +27,9 @@ global graph
 @app.route('/')
 def mapview():
     quote_markers = []
-    geocodes = get_quotes()
-    total_quotes = len(geocodes)
-    for geocode in geocodes:
+    quote_geocodes = get_quotes()
+    total_quotes = len(quote_geocodes)
+    for geocode in quote_geocodes:
         marker = {
             'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
             'lat': geocode['lat'],
@@ -49,9 +49,9 @@ def mapview():
         style= "height:600px;width:800,px;margin:0;"
     )
     policy_markers = []
-    geocodes = get_policies()
-    total_policies = len(geocodes)
-    for geocode in geocodes:
+    policy_geocodes = get_policies()
+    total_policies = len(policy_geocodes)
+    for geocode in policy_geocodes:
         marker = {
             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
             'lat': geocode['lat'],

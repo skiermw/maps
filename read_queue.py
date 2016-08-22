@@ -3,6 +3,7 @@ import pika
 import sys
 import logging
 import json
+import write_nodes
 from py2neo import Graph, Relationship
 
 def main():
@@ -23,10 +24,6 @@ def main():
     queue_name = 'test_q'
     global count
     count = 0
-    #result = channel.queue_declare(queue=queue_name)
-
-    #filename = 'say.txt'
-    #outfile = open(filename, 'wb')
 
     print ' [*] Waiting for messages. To exit press CTRL+C'
 
@@ -40,9 +37,9 @@ def main():
 
         if 'type' in json_data:
             if json_data['type'] == 'events.quote.QuoteCreated':
-                write_quote_node(json_data)
+                write_nodes.write_quote_node(graph, json_data)
             elif json_data['type'] == 'events.policy.PolicyCreated':
-                write_policy_node(json_data)
+                write_nodes.write_policy_node(graph, json_data)
         #outfile.write(body)
         #if count > 1000:
         #    exit()
@@ -52,7 +49,7 @@ def main():
                           no_ack=True)
 
     channel.start_consuming()
-
+'''
 def write_quote_node(json_data):
     print('Writing Quote')
     id = json_data['event']['quote']['id']
@@ -98,7 +95,7 @@ def write_policy_node(json_data):
 
     address_node = write_address_node(json_data['event']['policy']['address'])
     results = graph.create_unique(Relationship(policy_node, "LOCATED_AT", address_node))
-
+'''
 # Start program
 if __name__ == "__main__":
    main()
