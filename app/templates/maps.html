@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <html>
+    <head>
+            {{quotemap.js}}
+            {{policymap.js}}
+    </head>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2> Quote Map</h2>
+         <h3> Total Quotes {{ total_quotes }}</h3>
+      <p>{{quotemap.html}}</p>
+    </div>
+    <div class="col-sm-6">
+      <h2> Policy Map</h2>
+        <h3> Total Policies {{ total_policies }}</h3>
+      <p>  {{policymap.html}}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

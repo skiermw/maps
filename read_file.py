@@ -13,7 +13,7 @@ def main():
 
     bucket = s3.Bucket('say-bi-prod')
     for item in bucket.objects.all():
-        if 'BI_Messages_2016-08-19/' in item.key:
+        if 'BI_Messages_2016-08-22/' in item.key:
             #msg_file = item.get()['Body'].read()
             msg_file = item.get()['Body']
             print(msg_file)
