@@ -40,7 +40,8 @@ def main():
             elif json_data['type'] == 'events.policy.PolicyOverwritten':
                     print('Policy overwritten')
             else:
-                print('Found Policy Type %s' % json_data['type'])
+                if 'events.policy' in json_data['type']:
+                    print('Found Policy Type %s' % json_data['type'])
 
     channel.basic_consume(callback,
                           queue=queue_name,

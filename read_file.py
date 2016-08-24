@@ -9,8 +9,10 @@ from py2neo import Graph, Relationship, authenticate
 
 def main():
     global graph
-    authenticate("localhost:7474", "neo4j", "hyenas")
-    graph = Graph()
+    #authenticate("localhost:7474", "neo4j", "shelter")
+    #graph = Graph()
+    #authenticate("http://10.8.30.145:7474/", "neo4j", "shelter")
+    graph = Graph("http://neo4j:shelter@10.8.30.145:7474/db/data/")
     print(graph.uri)
 
     s3 = boto3.resource('s3')
@@ -32,7 +34,8 @@ def main():
                     print('Policy overwritten')
                     #write_nodes.write_policy_node(graph, json_data)
                 else:
-                    print('Found Policy Type %s' % json_data['type'])
+                    if 'events.policy' in json_data['type']:
+                        print('Found Policy Type %s' % json_data['type'])
 
 # Start program
 if __name__ == "__main__":
