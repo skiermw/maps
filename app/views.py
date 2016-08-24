@@ -10,11 +10,6 @@ from flask_googlemaps import Map
 from app import app
 
 
-'''
-# create our little application :)
-app = Flask(__name__)
-app.config.from_object(__name__)
-'''
 # configuration
 QUOTE_QUERY = "MATCH (q:Quote) RETURN q.applicant AS applicant, q.lat AS lat, q.lng AS lng"
 QUOTE_CT_QUERY = "MATCH (q:Quote) RETURN COUNT(q) AS total"

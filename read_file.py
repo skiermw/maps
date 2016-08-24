@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+# this program does a full load of the graph from the BI S3 stored messages.
+
 import boto3
 import json
 import write_nodes
@@ -14,10 +17,10 @@ def main():
 
     bucket = s3.Bucket('say-bi-prod')
     for item in bucket.objects.all():
-        if 'BI_Messages_2016-08-22/' in item.key:
+        if 'BI_Messages_' in item.key and not 'BI_Messages_2016-08-22/' in item.key:
             #msg_file = item.get()['Body'].read()
             msg_file = item.get()['Body']
-            print(msg_file)
+            #print(msg_file)
             json_data = json.load(msg_file)
             #json_data = msg_file
             if 'type' in json_data:
@@ -25,8 +28,11 @@ def main():
                     write_nodes.write_quote_node(graph, json_data)
                 elif json_data['type'] == 'events.policy.PolicyCreated':
                     write_nodes.write_policy_node(graph, json_data)
+                elif json_data['type'] == 'events.policy.PolicyOverwritten':
+                    print('Policy overwritten')
+                    #write_nodes.write_policy_node(graph, json_data)
                 else:
-                    print(json_data['type'])
+                    print('Found Policy Type %s' % json_data['type'])
 
 # Start program
 if __name__ == "__main__":

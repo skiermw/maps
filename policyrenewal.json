@@ -1,0 +1,1515 @@
+{
+  "effectiveTimestamp": "2016-04-13T06:01:00.000Z",
+  "event": {
+    "@class": "events.policy.PolicyRenewed",
+    "id": "6d2e86f8bb2c488c9e84a2bc22e9e711",
+    "policy": {
+      "additionalListedInsureds": [
+        
+      ],
+      "address": {
+        "city": "Skokie",
+        "county": "Cook",
+        "id": "043d19c633fc4bbaa20987b594078432",
+        "latitude": 42.0101,
+        "longitude": -87.75354,
+        "state": "IL",
+        "street": "5014 Estes Ave",
+        "zip": "60077-3520"
+      },
+      "applicant": {
+        "age": 59,
+        "birthDate": "1956-09-10",
+        "clientId": "3532",
+        "creditReport": {
+          "id": "8169c7255a744131ac9925156056472e",
+          "reasons": [
+            {
+              "code": "0131",
+              "description": "ACCOUNT WITH A REPORTED DELINQUENCY STATUS INCLUDING BAD DEBT",
+              "id": "90473e37815f42168be69c68f8f08a37"
+            },
+            {
+              "code": "0142",
+              "description": "# OF NON CLOSED ACCOUNTS",
+              "id": "f60478f257284142bbde56c63f1c022a"
+            },
+            {
+              "code": "0902",
+              "description": "INSUFFICIENT INFORMATION ON BANK REVOLVING ACCOUNTS",
+              "id": "ccfdc5ab88f243d1beb91f33da2b74b0"
+            },
+            {
+              "code": "0143",
+              "description": "# OF ACCOUNTS WITH A PAST DUE AMOUNT",
+              "id": "2551408af5a34c8683af2cc55b8c6c54"
+            }
+          ],
+          "referenceNumber": "15282211600627",
+          "score": 589,
+          "status": "Scored"
+        },
+        "firstName": "Kathy",
+        "gender": "Female",
+        "id": "bbf2b391b9174fb58ea690070978500a",
+        "lastName": "Bockett",
+        "maritalStatus": "Single"
+      },
+      "channelOfOrigin": "PublicWebsite",
+      "company": "ShelterGeneral",
+      "compositeDriverRatingFactorWithPoints": 0.84,
+      "compositeDriverRatingFactorWithoutPoints": 0.84,
+      "coverages": [
+        
+      ],
+      "discounts": [
+        {
+          "id": "d6713b079a03471fa3c06aadc3b7404b",
+          "type": "AdvancePurchase"
+        },
+        {
+          "id": "80a96c369d5e4db2b95f5152101a6a97",
+          "type": "PayInFull"
+        },
+        {
+          "id": "b7262aee7c754289be9918766e471e58",
+          "type": "OnlineSubmission"
+        }
+      ],
+      "documentDeliveryMethod": "Email",
+      "drivers": [
+        {
+          "age": 59,
+          "birthDate": "1956-09-10",
+          "claimsAdverseAction": false,
+          "clientId": "3532",
+          "creditReport": {
+            "id": "8169c7255a744131ac9925156056472e",
+            "reasons": [
+              {
+                "code": "0131",
+                "description": "ACCOUNT WITH A REPORTED DELINQUENCY STATUS INCLUDING BAD DEBT",
+                "id": "90473e37815f42168be69c68f8f08a37"
+              },
+              {
+                "code": "0142",
+                "description": "# OF NON CLOSED ACCOUNTS",
+                "id": "f60478f257284142bbde56c63f1c022a"
+              },
+              {
+                "code": "0902",
+                "description": "INSUFFICIENT INFORMATION ON BANK REVOLVING ACCOUNTS",
+                "id": "ccfdc5ab88f243d1beb91f33da2b74b0"
+              },
+              {
+                "code": "0143",
+                "description": "# OF ACCOUNTS WITH A PAST DUE AMOUNT",
+                "id": "2551408af5a34c8683af2cc55b8c6c54"
+              }
+            ],
+            "referenceNumber": "15282211600627",
+            "score": 589,
+            "status": "Scored"
+          },
+          "drivingRecord": {
+            "claims": [
+              {
+                "chargeable": false,
+                "claimDate": "2013-07-23",
+                "fault": "NotAtFault",
+                "id": "c42af42cc6084646ababe8439f8a3a65",
+                "payments": [
+                  {
+                    "amount": 0,
+                    "id": "d086c3029aee44798831b84ac3db67c1",
+                    "status": "Closed",
+                    "type": "Collision"
+                  }
+                ]
+              },
+              {
+                "chargeable": false,
+                "claimDate": "2011-05-23",
+                "fault": "Unknown",
+                "id": "6fb69b0d50604fb3a44aa94356921616",
+                "payments": [
+                  {
+                    "amount": 617,
+                    "id": "0cf5c7731c1a4e429aac1f65e9f1c043",
+                    "status": "Closed",
+                    "type": "Collision"
+                  },
+                  {
+                    "amount": 50,
+                    "id": "b1d0f2e6a19c4cad8230f6b2ae7954cd",
+                    "status": "Closed",
+                    "type": "UninsuredMotorist"
+                  }
+                ]
+              },
+              {
+                "chargeable": false,
+                "claimDate": "2013-07-23",
+                "fault": "NotAtFault",
+                "id": "ddbd733889ab4ebd90fbbcbb406b1401",
+                "payments": [
+                  {
+                    "amount": 0,
+                    "id": "cc564ef7071f499fa1224a462986e0bc",
+                    "status": "Closed",
+                    "type": "Collision"
+                  }
+                ]
+              },
+              {
+                "chargeable": false,
+                "claimDate": "2011-05-23",
+                "fault": "Unknown",
+                "id": "4ea5fe88f5504e7e97725f8880bd4153",
+                "payments": [
+                  {
+                    "amount": 617,
+                    "id": "d9d6126ce28149508a78ea846e0e58ba",
+                    "status": "Closed",
+                    "type": "Collision"
+                  },
+                  {
+                    "amount": 50,
+                    "id": "57fe30f5e01943058d2ebab74b74fc49",
+                    "status": "Closed",
+                    "type": "UninsuredMotorist"
+                  }
+                ]
+              }
+            ],
+            "clueReferenceNumber": "15282211800630",
+            "id": "abc0f52acedc42058194cf6d1070c7de",
+            "mvrStatus": "CLEAR",
+            "suspensions": [
+              
+            ],
+            "violations": [
+              {
+                "code": "08110",
+                "id": "4b1043e869c9486fba06253ae7a61ab6"
+              },
+              {
+                "code": "08110",
+                "id": "0864eb9d4dcb459fab390f6d6eb01304"
+              }
+            ]
+          },
+          "firstName": "Kathy",
+          "gender": "Female",
+          "id": "bbf2b391b9174fb58ea690070978500a",
+          "lastName": "Bockett",
+          "licenseNumber": "B53653745846",
+          "licenseState": "IL",
+          "licenseStatus": "Valid",
+          "maritalStatus": "Single",
+          "violationsAdverseAction": false,
+          "violationPoints": 0
+        }
+      ],
+      "effectiveDate": "2016-04-13T06:01:00.000Z",
+      "evidenceOfPriorInsurance": false,
+      "expirationDate": "2016-10-13T06:01:00.000Z",
+      "familyNumber": "000003091",
+      "fcraNoticeRequired": true,
+      "firstPolicyEffectiveDate": "2015-10-13T16:10:17.898Z",
+      "firstPolicySubmissionDate": "2015-10-13T16:10:17.898Z",
+      "flyers": [
+        "DNI-1000.1",
+        "DNI-1001"
+      ],
+      "forms": [
+        "DPA-0001",
+        "DPA-0020",
+        "DPA-0100",
+        "DPA-0140",
+        "DPA-0160",
+        "DPA-0180",
+        "DPA-0400",
+        "DPA-0600",
+        "DIL-7999"
+      ],
+      "id": "1d6cd089656b4cb5ada03f0d2c30aecb",
+      "lineOfBusiness": "JA",
+      "namedInsureds": [
+        {
+          "age": 59,
+          "birthDate": "1956-09-10",
+          "clientId": "3532",
+          "creditReport": {
+            "id": "8169c7255a744131ac9925156056472e",
+            "reasons": [
+              {
+                "code": "0131",
+                "description": "ACCOUNT WITH A REPORTED DELINQUENCY STATUS INCLUDING BAD DEBT",
+                "id": "90473e37815f42168be69c68f8f08a37"
+              },
+              {
+                "code": "0142",
+                "description": "# OF NON CLOSED ACCOUNTS",
+                "id": "f60478f257284142bbde56c63f1c022a"
+              },
+              {
+                "code": "0902",
+                "description": "INSUFFICIENT INFORMATION ON BANK REVOLVING ACCOUNTS",
+                "id": "ccfdc5ab88f243d1beb91f33da2b74b0"
+              },
+              {
+                "code": "0143",
+                "description": "# OF ACCOUNTS WITH A PAST DUE AMOUNT",
+                "id": "2551408af5a34c8683af2cc55b8c6c54"
+              }
+            ],
+            "referenceNumber": "15282211600627",
+            "score": 589,
+            "status": "Scored"
+          },
+          "firstName": "Kathy",
+          "gender": "Female",
+          "id": "bbf2b391b9174fb58ea690070978500a",
+          "lastName": "Bockett",
+          "maritalStatus": "Single"
+        }
+      ],
+      "nonDescribedVehicle": {
+        "coverages": [
+          {
+            "id": "521bc56b21734e2abbeb308c23eb3ba6",
+            "limits": [
+              {
+                "id": "6687b37a6faa49cfa30a19f98b895810",
+                "type": "PerPerson",
+                "value": 50000
+              },
+              {
+                "id": "00f471e2d17047efa177f8ff9fbe8d61",
+                "type": "PerOccurrence",
+                "value": 100000
+              }
+            ],
+            "type": "BodilyInjury"
+          },
+          {
+            "id": "bba4bc8ee4aa4115afbfdf49f141d9e2",
+            "limits": [
+              {
+                "id": "05a13649fc22429799558be9c10f84d6",
+                "type": "PerOccurrence",
+                "value": 50000
+              }
+            ],
+            "type": "PropertyDamage"
+          },
+          {
+            "id": "7f1e54e52bc94d538324093f17dc81f5",
+            "limits": [
+              {
+                "id": "a61fc5d1f20946ca80f4b53cbab9acab",
+                "type": "PerPerson",
+                "value": 50000
+              },
+              {
+                "id": "440788daf0354df693820522972dc112",
+                "type": "PerOccurrence",
+                "value": 100000
+              }
+            ],
+            "type": "UninsuredMotorist"
+          },
+          {
+            "id": "73e0701e1a754d1bb6df607bd89bbf29",
+            "limits": [
+              {
+                "id": "48fb9ab84f8246ffb41b7d1a601995da",
+                "type": "PerPerson",
+                "value": 2000
+              }
+            ],
+            "type": "MedicalPayments"
+          },
+          {
+            "id": "689c14466001435b8db15bde5006108c",
+            "limits": [
+              {
+                "id": "e77c0be8ad294cc48525d5f894130b31",
+                "type": "Deductible",
+                "value": 1000
+              }
+            ],
+            "type": "Collision"
+          },
+          {
+            "id": "658245ddf0c44e8b80ced1901aae4c24",
+            "limits": [
+              {
+                "id": "b9039452bf6945ed9830f68f707719f3",
+                "type": "Deductible",
+                "value": 1000
+              }
+            ],
+            "type": "Comprehensive"
+          }
+        ],
+        "id": "99478be2429246928f863317ca4d3f9b",
+        "permissiveUserCoverages": [
+          {
+            "id": "c401ce35e03b43f5899300866f510541",
+            "limits": [
+              {
+                "id": "8a02518020614b45b5abcd2499d75a64",
+                "type": "PerPerson",
+                "value": 25000
+              },
+              {
+                "id": "7bef8cfbf4ee4f9d918e08e5463316c1",
+                "type": "PerOccurrence",
+                "value": 50000
+              }
+            ],
+            "type": "BodilyInjury"
+          },
+          {
+            "id": "6ac6950219784b9dbaaa3ea68e75f401",
+            "limits": [
+              {
+                "id": "eee3a6b054bc4936921ff746dc4dd656",
+                "type": "PerOccurrence",
+                "value": 25000
+              }
+            ],
+            "type": "PropertyDamage"
+          }
+        ]
+      },
+      "notices": [
+        "DNI-1020"
+      ],
+      "paymentPlan": "F6",
+      "policyNumber": "000003278",
+      "renewableStatus": "Renewable",
+      "revision": 3,
+      "revisionTimestamp": "2015-10-13T16:22:59.545Z",
+      "status": "Active",
+      "term": 6,
+      "territory": "28",
+      "totalDiscount": 336.34,
+      "totalPremium": 1541.88,
+      "vehicles": [
+        {
+          "businessUse": "NonBusinessUse",
+          "costSymbol": "025",
+          "coverages": [
+            {
+              "id": "9f4f2660995d48dab1104679ead437d1",
+              "limits": [
+                {
+                  "id": "c1c16af085b0484caec9d038768ece30",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "fbb0afc094864906a435f46e8f6405dc",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 149.39,
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "6d0fdaffef3141c7800d83b432021a54",
+              "limits": [
+                {
+                  "id": "85dbd3fae1c74fd2a5f65fd2c8e6db5c",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "premium": 253.45,
+              "type": "PropertyDamage"
+            },
+            {
+              "id": "6b47668fa6a047fd90ad27e08cf3fc8c",
+              "limits": [
+                {
+                  "id": "c0f164905140485ebe468869347d378e",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "e0c4a55338444e9bb908899fb3d3e9ec",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 25.13,
+              "type": "UninsuredMotorist"
+            },
+            {
+              "id": "52d01db543ce45809fad4ff8379324b9",
+              "limits": [
+                {
+                  "id": "2ffe8561553d4c988248500f4df7c16d",
+                  "type": "PerPerson",
+                  "value": 2000
+                }
+              ],
+              "premium": 24.51,
+              "type": "MedicalPayments"
+            },
+            {
+              "id": "5217333ecaf94287b764f5ea06a87b4b",
+              "limits": [
+                {
+                  "id": "87ec145653594f4e946c7a722f31b3ec",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 90.44,
+              "type": "Comprehensive"
+            },
+            {
+              "id": "3822d87a48324d829dba9818d3b96361",
+              "limits": [
+                {
+                  "id": "f441b49f84924df5b74f1b8f83983515",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 190.61,
+              "type": "Collision"
+            },
+            {
+              "id": "d1ccc5e428a94a21b568a42687a7f58a",
+              "limits": [
+                {
+                  "id": "1b77b9f2dce64f4e8754e66daeec4bdc",
+                  "type": "PerDay",
+                  "value": 30
+                }
+              ],
+              "premium": 11.42,
+              "type": "RentalReimbursement"
+            },
+            {
+              "id": "c4f37cbf962a40a39db2d4e61d751fbc",
+              "limits": [
+                {
+                  "id": "0814becb15614882976d66a77a371a66",
+                  "type": "PerOccurrence",
+                  "value": 100
+                }
+              ],
+              "premium": 0,
+              "type": "RoadsideAssistance"
+            }
+          ],
+          "id": "3ad159e84bc44d6e9810d558adc712c7",
+          "make": "Pontiac",
+          "model": "Montana",
+          "ownership": "Owned",
+          "permissiveUserCoverages": [
+            {
+              "id": "4c508e9110e841e9911245af1d48c796",
+              "limits": [
+                {
+                  "id": "7131b2b5acd9463d886ad1e95b8e9e1e",
+                  "type": "PerPerson",
+                  "value": 25000
+                },
+                {
+                  "id": "597b61954bf9463799fb3ad9b25ddfea",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "da62bca918f54814969c0be47824e1cc",
+              "limits": [
+                {
+                  "id": "8fc9de3406ff4299b5ed0754ff415a14",
+                  "type": "PerOccurrence",
+                  "value": 25000
+                }
+              ],
+              "type": "PropertyDamage"
+            }
+          ],
+          "previouslyInsured": false,
+          "pseudoVin": "  M X03 ",
+          "sequence": 1,
+          "trim": "Ext. Passenger Van",
+          "trimCode": "1",
+          "vin": "1GMDX03E63D154385",
+          "year": 2003
+        },
+        {
+          "antiTheftDevice": false,
+          "businessUse": "NonBusinessUse",
+          "costSymbol": "033",
+          "coverages": [
+            {
+              "id": "947522f2adce417db3643890a8da6fbd",
+              "limits": [
+                {
+                  "id": "49fd33aeae9c407d9a7c15238f930db0",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "a784aeff5aeb43188def374047156e82",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 149.39,
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "3c944f360f8c47799b0cde28f45386f5",
+              "limits": [
+                {
+                  "id": "0d63a7a0d9834cacb7125ec62f950fe6",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "premium": 253.45,
+              "type": "PropertyDamage"
+            },
+            {
+              "id": "d95a919ea2ec4364b61b32d266f1525b",
+              "limits": [
+                {
+                  "id": "c0093b4cda0744808326709033bdd2f3",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "66fb0b0e54ec4438b2a0f0c1e72d8d40",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 25.13,
+              "type": "UninsuredMotorist"
+            },
+            {
+              "id": "f6933baeeaeb4212a7b02aeb828bf142",
+              "limits": [
+                {
+                  "id": "6ce01d564c4a464fb9bbc643adc8258c",
+                  "type": "PerPerson",
+                  "value": 2000
+                }
+              ],
+              "premium": 24.51,
+              "type": "MedicalPayments"
+            },
+            {
+              "id": "b6e724b9c5f04d54acd5528416aeef2b",
+              "limits": [
+                {
+                  "id": "55bc4b6ee6a9485ea0c2736b84ff8cdd",
+                  "type": "PerDay",
+                  "value": 30
+                }
+              ],
+              "premium": 11.42,
+              "type": "RentalReimbursement"
+            },
+            {
+              "id": "da5ca2f09de8408aa481e5df73a2b064",
+              "limits": [
+                {
+                  "id": "07c8583c30c5440d87c5197fd1c5028a",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 102.82,
+              "type": "Comprehensive"
+            },
+            {
+              "id": "0bbaa81dd43b4da390ce6c0f4db6493f",
+              "limits": [
+                {
+                  "id": "226031c812724e05b68fd76cd0ea4020",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 230.21,
+              "type": "Collision"
+            },
+            {
+              "id": "12355a0ba7c84a9985cb652b07708a99",
+              "limits": [
+                {
+                  "id": "ff595973c8c5457db023985267d24dc8",
+                  "type": "PerOccurrence",
+                  "value": 100
+                }
+              ],
+              "premium": 0,
+              "type": "RoadsideAssistance"
+            }
+          ],
+          "id": "f7ad46c425ed4d10a66a0aa548ccd4f1",
+          "make": "Chevrolet",
+          "model": "Silverado 2500 HD",
+          "ownership": "Owned",
+          "permissiveUserCoverages": [
+            {
+              "id": "52523d178aa649cb8beafdb489311dfc",
+              "limits": [
+                {
+                  "id": "bf040f52b00d4173a1f7ee8c36397e05",
+                  "type": "PerPerson",
+                  "value": 25000
+                },
+                {
+                  "id": "a4d0b589e8d94301ab23ba0d3281b9ad",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "4db9add2bdf9499bb5fb4731eb7174d1",
+              "limits": [
+                {
+                  "id": "f6f83ac6621140cb9f6be9edab6bb50f",
+                  "type": "PerOccurrence",
+                  "value": 25000
+                }
+              ],
+              "type": "PropertyDamage"
+            }
+          ],
+          "pseudoVin": "  C K23 ",
+          "sequence": 2,
+          "trim": "4wd LS Crew Cab SWB gas",
+          "trimCode": "6",
+          "vin": "1GCHK23U94F160680",
+          "year": 2004
+        }
+      ]
+    },
+    "previousPolicy": {
+      "additionalListedInsureds": [
+        
+      ],
+      "address": {
+        "city": "Skokie",
+        "county": "Cook",
+        "id": "043d19c633fc4bbaa20987b594078432",
+        "latitude": 42.0101,
+        "longitude": -87.75354,
+        "state": "IL",
+        "street": "5014 Estes Ave",
+        "zip": "60077-3520"
+      },
+      "applicant": {
+        "age": 59,
+        "birthDate": "1956-09-10",
+        "clientId": "3532",
+        "creditReport": {
+          "id": "c856fcdbde354651b5bdd059bdc52654",
+          "reasons": [
+            {
+              "code": "0131",
+              "description": "ACCOUNT WITH A REPORTED DELINQUENCY STATUS INCLUDING BAD DEBT",
+              "id": "57f6d01c4ff244c48d309a51e17e7ca2"
+            },
+            {
+              "code": "0142",
+              "description": "# OF NON CLOSED ACCOUNTS",
+              "id": "431a1290dab94f889e79741c3254df47"
+            },
+            {
+              "code": "0902",
+              "description": "INSUFFICIENT INFORMATION ON BANK REVOLVING ACCOUNTS",
+              "id": "e44f6eddf84749fdac1ef9c491f961f3"
+            },
+            {
+              "code": "0143",
+              "description": "# OF ACCOUNTS WITH A PAST DUE AMOUNT",
+              "id": "8d4aac107a22433fa39d46597eab78eb"
+            }
+          ],
+          "referenceNumber": "15282211600627",
+          "score": 589,
+          "status": "Scored"
+        },
+        "firstName": "Kathy",
+        "gender": "Female",
+        "id": "bbf2b391b9174fb58ea690070978500a",
+        "lastName": "Bockett",
+        "maritalStatus": "Single"
+      },
+      "channelOfOrigin": "PublicWebsite",
+      "company": "ShelterGeneral",
+      "compositeDriverRatingFactorWithPoints": 0.84,
+      "compositeDriverRatingFactorWithoutPoints": 0.84,
+      "coverages": [
+        
+      ],
+      "discounts": [
+        {
+          "id": "fb8e1cf98d0041b49d9deb2045f133b7",
+          "type": "AdvancePurchase"
+        },
+        {
+          "id": "036d4b1bfdfc4c978be422c243b7cea0",
+          "type": "PayInFull"
+        },
+        {
+          "id": "72b961c8969542da869fdb7dd3e2f7ee",
+          "type": "OnlineSubmission"
+        }
+      ],
+      "documentDeliveryMethod": "Email",
+      "drivers": [
+        {
+          "age": 59,
+          "birthDate": "1956-09-10",
+          "claimsAdverseAction": false,
+          "clientId": "3532",
+          "creditReport": {
+            "id": "c856fcdbde354651b5bdd059bdc52654",
+            "reasons": [
+              {
+                "code": "0131",
+                "description": "ACCOUNT WITH A REPORTED DELINQUENCY STATUS INCLUDING BAD DEBT",
+                "id": "57f6d01c4ff244c48d309a51e17e7ca2"
+              },
+              {
+                "code": "0142",
+                "description": "# OF NON CLOSED ACCOUNTS",
+                "id": "431a1290dab94f889e79741c3254df47"
+              },
+              {
+                "code": "0902",
+                "description": "INSUFFICIENT INFORMATION ON BANK REVOLVING ACCOUNTS",
+                "id": "e44f6eddf84749fdac1ef9c491f961f3"
+              },
+              {
+                "code": "0143",
+                "description": "# OF ACCOUNTS WITH A PAST DUE AMOUNT",
+                "id": "8d4aac107a22433fa39d46597eab78eb"
+              }
+            ],
+            "referenceNumber": "15282211600627",
+            "score": 589,
+            "status": "Scored"
+          },
+          "drivingRecord": {
+            "claims": [
+              {
+                "chargeable": false,
+                "claimDate": "2013-07-23",
+                "fault": "NotAtFault",
+                "id": "c42af42cc6084646ababe8439f8a3a65",
+                "payments": [
+                  {
+                    "amount": 0,
+                    "id": "d086c3029aee44798831b84ac3db67c1",
+                    "status": "Closed",
+                    "type": "Collision"
+                  }
+                ]
+              },
+              {
+                "chargeable": false,
+                "claimDate": "2011-05-23",
+                "fault": "Unknown",
+                "id": "6fb69b0d50604fb3a44aa94356921616",
+                "payments": [
+                  {
+                    "amount": 617,
+                    "id": "0cf5c7731c1a4e429aac1f65e9f1c043",
+                    "status": "Closed",
+                    "type": "Collision"
+                  },
+                  {
+                    "amount": 50,
+                    "id": "b1d0f2e6a19c4cad8230f6b2ae7954cd",
+                    "status": "Closed",
+                    "type": "UninsuredMotorist"
+                  }
+                ]
+              },
+              {
+                "chargeable": false,
+                "claimDate": "2013-07-23",
+                "fault": "NotAtFault",
+                "id": "ddbd733889ab4ebd90fbbcbb406b1401",
+                "payments": [
+                  {
+                    "amount": 0,
+                    "id": "cc564ef7071f499fa1224a462986e0bc",
+                    "status": "Closed",
+                    "type": "Collision"
+                  }
+                ]
+              },
+              {
+                "chargeable": false,
+                "claimDate": "2011-05-23",
+                "fault": "Unknown",
+                "id": "4ea5fe88f5504e7e97725f8880bd4153",
+                "payments": [
+                  {
+                    "amount": 617,
+                    "id": "d9d6126ce28149508a78ea846e0e58ba",
+                    "status": "Closed",
+                    "type": "Collision"
+                  },
+                  {
+                    "amount": 50,
+                    "id": "57fe30f5e01943058d2ebab74b74fc49",
+                    "status": "Closed",
+                    "type": "UninsuredMotorist"
+                  }
+                ]
+              }
+            ],
+            "clueReferenceNumber": "15282211800630",
+            "id": "abc0f52acedc42058194cf6d1070c7de",
+            "mvrStatus": "CLEAR",
+            "suspensions": [
+              
+            ],
+            "violations": [
+              {
+                "code": "08110",
+                "id": "4b1043e869c9486fba06253ae7a61ab6"
+              },
+              {
+                "code": "08110",
+                "id": "0864eb9d4dcb459fab390f6d6eb01304"
+              }
+            ]
+          },
+          "firstName": "Kathy",
+          "gender": "Female",
+          "id": "bbf2b391b9174fb58ea690070978500a",
+          "lastName": "Bockett",
+          "licenseNumber": "B53653745846",
+          "licenseState": "IL",
+          "licenseStatus": "Valid",
+          "maritalStatus": "Single",
+          "violationsAdverseAction": false,
+          "violationPoints": 0
+        }
+      ],
+      "effectiveDate": "2015-10-13T16:10:17.898Z",
+      "evidenceOfPriorInsurance": false,
+      "expirationDate": "2016-04-13T06:01:00.000Z",
+      "familyNumber": "000003091",
+      "fcraNoticeRequired": true,
+      "firstPolicyEffectiveDate": "2015-10-13T16:10:17.898Z",
+      "firstPolicySubmissionDate": "2015-10-13T16:10:17.898Z",
+      "flyers": [
+        "DNI-1000.1",
+        "DNI-1001"
+      ],
+      "forms": [
+        "DPA-0001",
+        "DPA-0020",
+        "DPA-0100",
+        "DPA-0140",
+        "DPA-0160",
+        "DPA-0180",
+        "DPA-0400",
+        "DPA-0600",
+        "DIL-7999"
+      ],
+      "id": "1d6cd089656b4cb5ada03f0d2c30aecb",
+      "lineOfBusiness": "JA",
+      "namedInsureds": [
+        {
+          "age": 59,
+          "birthDate": "1956-09-10",
+          "clientId": "3532",
+          "creditReport": {
+            "id": "c856fcdbde354651b5bdd059bdc52654",
+            "reasons": [
+              {
+                "code": "0131",
+                "description": "ACCOUNT WITH A REPORTED DELINQUENCY STATUS INCLUDING BAD DEBT",
+                "id": "57f6d01c4ff244c48d309a51e17e7ca2"
+              },
+              {
+                "code": "0142",
+                "description": "# OF NON CLOSED ACCOUNTS",
+                "id": "431a1290dab94f889e79741c3254df47"
+              },
+              {
+                "code": "0902",
+                "description": "INSUFFICIENT INFORMATION ON BANK REVOLVING ACCOUNTS",
+                "id": "e44f6eddf84749fdac1ef9c491f961f3"
+              },
+              {
+                "code": "0143",
+                "description": "# OF ACCOUNTS WITH A PAST DUE AMOUNT",
+                "id": "8d4aac107a22433fa39d46597eab78eb"
+              }
+            ],
+            "referenceNumber": "15282211600627",
+            "score": 589,
+            "status": "Scored"
+          },
+          "firstName": "Kathy",
+          "gender": "Female",
+          "id": "bbf2b391b9174fb58ea690070978500a",
+          "lastName": "Bockett",
+          "maritalStatus": "Single"
+        }
+      ],
+      "nonDescribedVehicle": {
+        "coverages": [
+          {
+            "id": "9977153daceb44fc8753993a32d97b0b",
+            "limits": [
+              {
+                "id": "494038ae87eb459088dd619ba749fed5",
+                "type": "PerPerson",
+                "value": 50000
+              },
+              {
+                "id": "5717db7097954130bb84e55482604db7",
+                "type": "PerOccurrence",
+                "value": 100000
+              }
+            ],
+            "type": "BodilyInjury"
+          },
+          {
+            "id": "944da31be45943729b0e9faf0d5c2d34",
+            "limits": [
+              {
+                "id": "dda62420e91f45a18290236800534a27",
+                "type": "PerOccurrence",
+                "value": 50000
+              }
+            ],
+            "type": "PropertyDamage"
+          },
+          {
+            "id": "600b4f15d9ba4294a33de03601c76ff3",
+            "limits": [
+              {
+                "id": "7a2135b23f184cc4818367c468a081c4",
+                "type": "PerPerson",
+                "value": 50000
+              },
+              {
+                "id": "452e3bcae24d4d5aac48edf7159ac829",
+                "type": "PerOccurrence",
+                "value": 100000
+              }
+            ],
+            "type": "UninsuredMotorist"
+          },
+          {
+            "id": "132239df1d9e4c8d922f96ecf5d92bef",
+            "limits": [
+              {
+                "id": "ba9210d99d2a4c3f92ca68f6f9d788c8",
+                "type": "PerPerson",
+                "value": 2000
+              }
+            ],
+            "type": "MedicalPayments"
+          },
+          {
+            "id": "00d12156f90e457db8fafe0c78b45689",
+            "limits": [
+              {
+                "id": "94c7bf8b81014d1f9d45c6ddedbafe0f",
+                "type": "Deductible",
+                "value": 1000
+              }
+            ],
+            "type": "Collision"
+          },
+          {
+            "id": "1b8d273c5ad24bfcb10a090f777e106a",
+            "limits": [
+              {
+                "id": "a45630e041f54c399b8a619bda74db53",
+                "type": "Deductible",
+                "value": 1000
+              }
+            ],
+            "type": "Comprehensive"
+          }
+        ],
+        "id": "39c42b709046499189c53a0af9373dae",
+        "permissiveUserCoverages": [
+          {
+            "id": "beae9182c89a40a79847cef95ca4db95",
+            "limits": [
+              {
+                "id": "cf374ef581834788a005e4828256f8a6",
+                "type": "PerPerson",
+                "value": 25000
+              },
+              {
+                "id": "c421ae71c633498db43c6821de45d361",
+                "type": "PerOccurrence",
+                "value": 50000
+              }
+            ],
+            "type": "BodilyInjury"
+          },
+          {
+            "id": "222004e86f0a4e948cc63cbc7c7abe9e",
+            "limits": [
+              {
+                "id": "0c61d56c1df64b24ac3c1106f7f1aa9a",
+                "type": "PerOccurrence",
+                "value": 25000
+              }
+            ],
+            "type": "PropertyDamage"
+          }
+        ]
+      },
+      "notices": [
+        "DNI-1020"
+      ],
+      "paymentPlan": "F6",
+      "policyNumber": "000003278",
+      "renewableStatus": "Renewable",
+      "revision": 2,
+      "revisionTimestamp": "2015-10-13T16:16:11.217Z",
+      "status": "Active",
+      "term": 6,
+      "territory": "28",
+      "totalDiscount": 352.55,
+      "totalPremium": 1616.84,
+      "vehicles": [
+        {
+          "businessUse": "NonBusinessUse",
+          "costSymbol": "025",
+          "coverages": [
+            {
+              "id": "d291b8d4abc44a3485598b60bc7dc663",
+              "limits": [
+                {
+                  "id": "2809f3f7fbf2451b859cd734d3940afc",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "471357a116784ddf87a594ddb49393e5",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 156.65,
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "b31a88e02a964a78b3274368c4bd76e5",
+              "limits": [
+                {
+                  "id": "79d44cd3106645b4bc1fa8cf33e8c385",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "premium": 265.77,
+              "type": "PropertyDamage"
+            },
+            {
+              "id": "2a040d8d3909441b88e56261a90b369e",
+              "limits": [
+                {
+                  "id": "cfec43c7c2754b52a4918d6d7a3c4e56",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "3a217208188d488dacdf36bbc45aa181",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 26.35,
+              "type": "UninsuredMotorist"
+            },
+            {
+              "id": "7e962aabc11d49609c5cc6b9ae445a34",
+              "limits": [
+                {
+                  "id": "ef74a35904b14d398bd0a9782c8257c3",
+                  "type": "PerPerson",
+                  "value": 2000
+                }
+              ],
+              "premium": 25.71,
+              "type": "MedicalPayments"
+            },
+            {
+              "id": "b5744f7bd3b04567a3b2a410692bf8bb",
+              "limits": [
+                {
+                  "id": "92a8af032c874eadb1cd4f012ca2952c",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 94.84,
+              "type": "Comprehensive"
+            },
+            {
+              "id": "042b6a13bc774264a671798c52ccdd32",
+              "limits": [
+                {
+                  "id": "b40802c10f95426db3c6f099479baa70",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 199.88,
+              "type": "Collision"
+            },
+            {
+              "id": "307a6b4edcdb47cdb5e5c6196dec9ebc",
+              "limits": [
+                {
+                  "id": "84ab7e9152124747ab36f148168d6f70",
+                  "type": "PerDay",
+                  "value": 30
+                }
+              ],
+              "premium": 11.97,
+              "type": "RentalReimbursement"
+            },
+            {
+              "id": "beb2d79179c84b0bafd939033afb02f4",
+              "limits": [
+                {
+                  "id": "dc6613f7f77f48a4ace61e8e63466a1c",
+                  "type": "PerOccurrence",
+                  "value": 100
+                }
+              ],
+              "premium": 0,
+              "type": "RoadsideAssistance"
+            }
+          ],
+          "id": "3ad159e84bc44d6e9810d558adc712c7",
+          "make": "Pontiac",
+          "model": "Montana",
+          "ownership": "Owned",
+          "permissiveUserCoverages": [
+            {
+              "id": "b66a7626c2994c54bd9626b3574884ec",
+              "limits": [
+                {
+                  "id": "630a77c6ef76482b856313cb2d114a7d",
+                  "type": "PerPerson",
+                  "value": 25000
+                },
+                {
+                  "id": "31babf78ad4c4ea087449ec9f4f0c44e",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "f7ac87d5fa4142359d0221bd9eca86a6",
+              "limits": [
+                {
+                  "id": "cc295ad6171a4b17b8c0bf103f54fe19",
+                  "type": "PerOccurrence",
+                  "value": 25000
+                }
+              ],
+              "type": "PropertyDamage"
+            }
+          ],
+          "previouslyInsured": false,
+          "pseudoVin": "  M X03 ",
+          "sequence": 1,
+          "trim": "Ext. Passenger Van",
+          "trimCode": "1",
+          "vin": "1GMDX03E63D154385",
+          "year": 2003
+        },
+        {
+          "antiTheftDevice": false,
+          "businessUse": "NonBusinessUse",
+          "costSymbol": "033",
+          "coverages": [
+            {
+              "id": "03c1ab968cbe498282d61ed73355f837",
+              "limits": [
+                {
+                  "id": "f645670107064bdb9d2e06ff35f2f11d",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "d8790125f6f34296864dd021dc4bc6dc",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 156.65,
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "2305420dcdce425d9fd1e4766cfecbbb",
+              "limits": [
+                {
+                  "id": "7497be0bb0a64834badc28ddf1cf8038",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "premium": 265.77,
+              "type": "PropertyDamage"
+            },
+            {
+              "id": "e1b62cb8bf404521ad5e97a746afb6c1",
+              "limits": [
+                {
+                  "id": "c66c6b43576a41c48996dec99e832030",
+                  "type": "PerPerson",
+                  "value": 50000
+                },
+                {
+                  "id": "6a8f23ec97ed445b89ada9b203c9ce40",
+                  "type": "PerOccurrence",
+                  "value": 100000
+                }
+              ],
+              "premium": 26.35,
+              "type": "UninsuredMotorist"
+            },
+            {
+              "id": "6f4a6d39e40347478257aa4850bd5e30",
+              "limits": [
+                {
+                  "id": "f4dd106e86304d76b6150fdfe10a97ba",
+                  "type": "PerPerson",
+                  "value": 2000
+                }
+              ],
+              "premium": 25.71,
+              "type": "MedicalPayments"
+            },
+            {
+              "id": "62640abc18074b2085077b070d613a2c",
+              "limits": [
+                {
+                  "id": "564ce734a6a448c6a4f22b866378c666",
+                  "type": "PerDay",
+                  "value": 30
+                }
+              ],
+              "premium": 11.97,
+              "type": "RentalReimbursement"
+            },
+            {
+              "id": "097e856a7bbe47c1bf5412b45df280a8",
+              "limits": [
+                {
+                  "id": "c2abf52d8fda4c009fd25631de9a7f91",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 107.82,
+              "type": "Comprehensive"
+            },
+            {
+              "id": "427a1f8e725b47bb894192ec50cbaa29",
+              "limits": [
+                {
+                  "id": "5ecb56398b814da58cfa7bb152a8cb26",
+                  "type": "Deductible",
+                  "value": 1000
+                }
+              ],
+              "premium": 241.4,
+              "type": "Collision"
+            },
+            {
+              "id": "a7e11364d4d349888c79dd88314a09bc",
+              "limits": [
+                {
+                  "id": "0b186ba63d814824bb40b586615b1eab",
+                  "type": "PerOccurrence",
+                  "value": 100
+                }
+              ],
+              "premium": 0,
+              "type": "RoadsideAssistance"
+            }
+          ],
+          "id": "f7ad46c425ed4d10a66a0aa548ccd4f1",
+          "make": "Chevrolet",
+          "model": "Silverado 2500 HD",
+          "ownership": "Owned",
+          "permissiveUserCoverages": [
+            {
+              "id": "d3d485b52be440059762d0796ee0169d",
+              "limits": [
+                {
+                  "id": "d188fabbb29f4c7a9d9f90eebe96d944",
+                  "type": "PerPerson",
+                  "value": 25000
+                },
+                {
+                  "id": "dfa24526da3c42f8b2d6a5f44cb4bb63",
+                  "type": "PerOccurrence",
+                  "value": 50000
+                }
+              ],
+              "type": "BodilyInjury"
+            },
+            {
+              "id": "2f9ab233a2af4680b500d61cd5dc4595",
+              "limits": [
+                {
+                  "id": "1fef5153178a4642becacc4afed2a7cc",
+                  "type": "PerOccurrence",
+                  "value": 25000
+                }
+              ],
+              "type": "PropertyDamage"
+            }
+          ],
+          "pseudoVin": "  C K23 ",
+          "sequence": 2,
+          "trim": "4wd LS Crew Cab SWB gas",
+          "trimCode": "6",
+          "vin": "1GCHK23U94F160680",
+          "year": 2004
+        }
+      ]
+    }
+  },
+  "streamRevision": 3,
+  "timestamp": "2015-10-13T16:22:59.545Z",
+  "type": "events.policy.PolicyRenewed",
+  "version": "0.4",
+  "writtenPremiumAdded": {
+    "totalPremium": 1541.88,
+    "vehicles": [
+      {
+        "coverages": [
+          {
+            "id": "9f4f2660995d48dab1104679ead437d1",
+            "premium": 149.39,
+            "type": "BodilyInjury"
+          },
+          {
+            "id": "6d0fdaffef3141c7800d83b432021a54",
+            "premium": 253.45,
+            "type": "PropertyDamage"
+          },
+          {
+            "id": "6b47668fa6a047fd90ad27e08cf3fc8c",
+            "premium": 25.13,
+            "type": "UninsuredMotorist"
+          },
+          {
+            "id": "52d01db543ce45809fad4ff8379324b9",
+            "premium": 24.51,
+            "type": "MedicalPayments"
+          },
+          {
+            "id": "5217333ecaf94287b764f5ea06a87b4b",
+            "premium": 90.44,
+            "type": "Comprehensive"
+          },
+          {
+            "id": "3822d87a48324d829dba9818d3b96361",
+            "premium": 190.61,
+            "type": "Collision"
+          },
+          {
+            "id": "d1ccc5e428a94a21b568a42687a7f58a",
+            "premium": 11.42,
+            "type": "RentalReimbursement"
+          },
+          {
+            "id": "c4f37cbf962a40a39db2d4e61d751fbc",
+            "premium": 0,
+            "type": "RoadsideAssistance"
+          }
+        ],
+        "id": "3ad159e84bc44d6e9810d558adc712c7",
+        "sequence": 1
+      },
+      {
+        "coverages": [
+          {
+            "id": "947522f2adce417db3643890a8da6fbd",
+            "premium": 149.39,
+            "type": "BodilyInjury"
+          },
+          {
+            "id": "3c944f360f8c47799b0cde28f45386f5",
+            "premium": 253.45,
+            "type": "PropertyDamage"
+          },
+          {
+            "id": "d95a919ea2ec4364b61b32d266f1525b",
+            "premium": 25.13,
+            "type": "UninsuredMotorist"
+          },
+          {
+            "id": "f6933baeeaeb4212a7b02aeb828bf142",
+            "premium": 24.51,
+            "type": "MedicalPayments"
+          },
+          {
+            "id": "b6e724b9c5f04d54acd5528416aeef2b",
+            "premium": 11.42,
+            "type": "RentalReimbursement"
+          },
+          {
+            "id": "da5ca2f09de8408aa481e5df73a2b064",
+            "premium": 102.82,
+            "type": "Comprehensive"
+          },
+          {
+            "id": "0bbaa81dd43b4da390ce6c0f4db6493f",
+            "premium": 230.21,
+            "type": "Collision"
+          },
+          {
+            "id": "12355a0ba7c84a9985cb652b07708a99",
+            "premium": 0,
+            "type": "RoadsideAssistance"
+          }
+        ],
+        "id": "f7ad46c425ed4d10a66a0aa548ccd4f1",
+        "sequence": 2
+      }
+    ]
+  },
+  "writtenPremiumRemoved": {
+    "totalPremium": 0
+  }
+}
