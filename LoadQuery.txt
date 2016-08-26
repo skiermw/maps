@@ -1,0 +1,17 @@
+MERGE (a:Query {name: "get all Policy Numbers", cypher: "MATCH (p:PolNum) RETURN p"})
+
+MERGE (d:Query {name: "Find all labels defined in graph", cypher: "MATCH (n)
+WITH DISTINCT labels(n) as labels
+UNWIND labels as label
+RETURN distinct label
+ORDER BY label"})
+
+MERGE (e:Query {name: "Find sample Queries", cypher: "MATCH (n:Query)
+RETURN n"})
+
+MERGE (f:Query {name: "Find all VMs in all environments", cypher:"MATCH (n:VM)-[:IS_IN]-(e:Environment)
+RETURN n.name, n.system, labels(n), e.name
+ORDER BY n.system, e.name"})
+
+MERGE (g:Query {name: "Find all dependencies for a Feature/Epic", cypher:"MATCH (f:Feature)-[:DEPENDS_ON]-(n:VM) WHERE f.name = 'Quote_DEMO' RETURN n.name, n.system ORDER BY n.system"})
+
