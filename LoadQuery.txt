@@ -1,17 +1,18 @@
 MERGE (a:Query {name: "get all Policy Numbers", cypher: "MATCH (p:PolNum) RETURN p"})
 
-MERGE (d:Query {name: "Find all labels defined in graph", cypher: "MATCH (n)
+MERGE (b:Query {name: "Find all labels defined in graph", cypher: "MATCH (n)
 WITH DISTINCT labels(n) as labels
 UNWIND labels as label
 RETURN distinct label
 ORDER BY label"})
 
-MERGE (e:Query {name: "Find sample Queries", cypher: "MATCH (n:Query)
-RETURN n"})
+MERGE (c:Query {name: "Find sample Queries", cypher: "MATCH (n:Query)
+RETURN n.name, n.cypher"})
 
-MERGE (f:Query {name: "Find all VMs in all environments", cypher:"MATCH (n:VM)-[:IS_IN]-(e:Environment)
-RETURN n.name, n.system, labels(n), e.name
-ORDER BY n.system, e.name"})
+MERGE (d:Query {name: "Find current policy coverage premium", cypher:"MATCH (pn:PolNum)-[:CURRENT]->(p:Policy)-[:HAS_COVERAGE]->(cov)
+WHERE pn.policyNumber = '228'
+RETURN cov.type, cov.premium"})
 
-MERGE (g:Query {name: "Find all dependencies for a Feature/Epic", cypher:"MATCH (f:Feature)-[:DEPENDS_ON]-(n:VM) WHERE f.name = 'Quote_DEMO' RETURN n.name, n.system ORDER BY n.system"})
-
+MERGE (e:Query {name: "Find previous policy coverage premium", cypher:"MATCH (pn:PolNum)-[:CURRENT]->(p:Policy)-[:PREVIOUS]-(old:Policy)-[:HAS_COVERAGE]->(cov)
+WHERE pn.policyNumber = '228'
+RETURN cov.type, cov.premium"})

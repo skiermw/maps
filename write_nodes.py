@@ -2,6 +2,10 @@ from py2neo import Graph, Relationship, authenticate, Node
 import requests
 import json
 
+def write_quote_type_node(graph, type):
+    #print('Writing Policy Number')
+
+    quote_type_node = graph.merge_one("QuoteType", "type", type)
 
 def write_policy_number_node(graph, json_data):
     print('Writing Policy Number')
@@ -239,8 +243,14 @@ def write_quote_node(graph, json_data):
     applicant = json_data['event']['quote']['applicant']['lastName'] +', ' + json_data['event']['quote']['applicant']['firstName']
     quote_node = graph.merge_one("Quote", "id", id)
     quote_node['applicant'] = applicant
-    quote_node['lat'] = json_data['event']['quote']['address']['latitude']
-    quote_node['lng'] = json_data['event']['quote']['address']['longitude']
+    if 'latitude' in json_data['event']['quote']['address']:
+        quote_node['lat'] = json_data['event']['quote']['address']['latitude']
+    else:
+        quote_node['lat'] = 1.01
+    if 'longitude' in json_data['event']['quote']['address']:
+        quote_node['lng'] = json_data['event']['quote']['address']['longitude']
+    else:
+        quote_node['lng'] = 1.01
     quote_node.push()
     address_node = write_address_node(graph, json_data['event']['quote']['address'])
     results = graph.create_unique(Relationship(quote_node, "LOCATED_AT", address_node))
@@ -253,14 +263,24 @@ def write_address_node(graph, address):
 
     address_key = address['street'] + address['zip'][:5]
     address_node = graph.merge_one("Address", "address_key", address_key)
-    address_node['lat'] = address['latitude']
-    address_node['lng'] = address['longitude']
+    #address_node['lat'] = address['latitude']
+    #address_node['lng'] = address['longitude']
+    if 'latitude' in address:
+        address_node['lat'] = address['latitude']
+    else:
+        address_node['lat'] = 1.01
+    if 'longitude' in address:
+        address_node['lng'] = address['longitude']
+    else:
+        address_node['lng'] = 1.01
     address_node['street'] = address['street']
     address_node['city'] = address['city']
-    address_node['county'] = address['county']
+    if 'county' in address:
+        address_node['county'] = address['county']
     address_node['state'] = address['state']
     address_node['zip'] = address['zip']
-    address_node['countyFIPS'] = address['countyFIPS']
+    if 'countyFIPS' in address:
+        address_node['countyFIPS'] = address['countyFIPS']
     address_node['id'] = address['id']
     address_node.push()
 

@@ -13,8 +13,8 @@ from app import app
 # configuration
 QUOTE_QUERY = "MATCH (q:Quote) RETURN q.applicant AS applicant, q.lat AS lat, q.lng AS lng"
 QUOTE_CT_QUERY = "MATCH (q:Quote) RETURN COUNT(q) AS total"
-POLICY_QUERY = "MATCH (q:Policy) RETURN q.applicant AS applicant, q.lat AS lat, q.lng AS lng"
-POLICY_CT_QUERY = "MATCH (q:Policy) RETURN COUNT(q) AS total"
+POLICY_QUERY = "MATCH (pn:PolNum)-[:CURRENT]-(p) RETURN p.applicant AS applicant, p.lat AS lat, p.lng AS lng"
+POLICY_CT_QUERY = "MATCH (pn:PolNum) RETURN COUNT(pn) AS total"
 
 global graph
 
@@ -25,6 +25,7 @@ def mapview():
     quote_geocodes = get_quotes()
     total_quotes = len(quote_geocodes)
     for geocode in quote_geocodes:
+        #print('Quote ' + str(geocode['lat']) + " " + str(geocode['lng']))
         marker = {
             'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
             'lat': geocode['lat'],
@@ -46,6 +47,7 @@ def mapview():
     policy_geocodes = get_policies()
     total_policies = len(policy_geocodes)
     for geocode in policy_geocodes:
+        #print('Policy ' + str(geocode['lat']) + " " + str(geocode['lng']))
         marker = {
             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
             'lat': geocode['lat'],
@@ -95,15 +97,19 @@ def policy():
 
 
 def get_quotes():
-    authenticate("localhost:7474", "neo4j", "hyenas")
-    graph = Graph()
+    #authenticate("localhost:7474", "neo4j", "hyenas")
+    #graph = Graph()
+    authenticate("http://10.8.30.145:7474/", "neo4j", "shelter")
+    graph = Graph("http://neo4j:shelter@10.8.30.145:7474/db/data/")
     geocodes = [dict(name=result.applicant, lat=result.lat, lng=result.lng) for result in graph.cypher.stream(QUOTE_QUERY)]
 
     return geocodes
 
 def get_policies():
-    authenticate("localhost:7474", "neo4j", "hyenas")
-    graph = Graph()
+    #authenticate("localhost:7474", "neo4j", "hyenas")
+    #graph = Graph()
+    authenticate("http://10.8.30.145:7474/", "neo4j", "shelter")
+    graph = Graph("http://neo4j:shelter@10.8.30.145:7474/db/data/")
     geocodes = [dict(name=result.applicant, lat=result.lat, lng=result.lng) for result in graph.cypher.stream(POLICY_QUERY)]
 
     return geocodes
