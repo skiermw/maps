@@ -4,14 +4,15 @@ import sys
 import logging
 import json
 import write_nodes
-from py2neo import Graph, Relationship
+from py2neo import Graph, Relationship, authenticate
 
 def main():
     global graph
 
-    graph = Graph()
+    #graph = Graph()
+    authenticate("http://10.8.30.145:7474/", "neo4j", "shelter")
+    graph = Graph("http://neo4j:shelter@10.8.30.145:7474/db/data/")
     print(graph.uri)
-
     logging.basicConfig()
 
     credentials = pika.PlainCredentials('RabbitMQAdmin','T3NpCYI7lW6x2O84I120dS')
@@ -36,9 +37,10 @@ def main():
             if json_data['type'] == 'events.quote.QuoteCreated':
                 write_nodes.write_quote_node(graph, json_data)
             elif json_data['type'] == 'events.policy.PolicyCreated':
-                write_nodes.write_policy_node(graph, json_data)
+                write_nodes.write_policy_number_node(graph, json_data)
             elif json_data['type'] == 'events.policy.PolicyOverwritten':
                     print('Policy overwritten')
+                    write_nodes.overwrite_policy(graph, json_data)
             else:
                 if 'events.policy' in json_data['type']:
                     print('Found Policy Type %s' % json_data['type'])

@@ -5,14 +5,15 @@
 import boto3
 import json
 import write_nodes
+
 from py2neo import Graph, Relationship, authenticate
 
 def main():
     global graph
-    #authenticate("localhost:7474", "neo4j", "shelter")
-    #graph = Graph()
-    authenticate("http://10.8.30.145:7474/", "neo4j", "shelter")
-    graph = Graph("http://neo4j:shelter@10.8.30.145:7474/db/data/")
+    authenticate("localhost:7474", "neo4j", "shelter")
+    graph = Graph()
+    #authenticate("http://10.8.30.145:7474/", "neo4j", "shelter")
+    #graph = Graph("http://neo4j:shelter@10.8.30.145:7474/db/data/")
     print(graph.uri)
 
     s3 = boto3.resource('s3',verify=False)

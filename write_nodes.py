@@ -1,6 +1,7 @@
 from py2neo import Graph, Relationship, authenticate, Node
 import requests
 import json
+import get_geocode
 
 def write_quote_type_node(graph, type):
     #print('Writing Policy Number')
@@ -109,11 +110,11 @@ def write_policy_node(graph, json_data):
 
     for vehicle in json_data['event']['policy']['vehicles']:
         vehicle_node = write_vehicle_node(graph, vehicle)
-        results = graph.create_unique(Relationship(policy_node, "INSURES", vehicle_node))
+        results = graph.create_unique(Relationship(policy_node, "COVERS", vehicle_node))
         for coverage in vehicle['coverages']:
             coverage_node = write_coverage_node(graph, coverage)
-            results = graph.create_unique(Relationship(policy_node, "HAS_COVERAGE", coverage_node))
-            results = graph.create_unique(Relationship(coverage_node, "COVERS", vehicle_node))
+            results = graph.create_unique(Relationship(vehicle_node, "HAS_COVERAGE", coverage_node))
+            #results = graph.create_unique(Relationship(policy_node, "COVERS", vehicle_node))
 
 
     address_node = write_address_node(graph, json_data['event']['policy']['address'])
@@ -126,8 +127,8 @@ def write_policy_node(graph, json_data):
 
 def write_vehicle_node(graph, vehicle_data):
     print('   Writing Vehicle')
-
-    vehicle_node = graph.merge_one("Vehicle", "vin", vehicle_data['vin'])
+    new_node = Node("Vehicle", "vin", vehicle_data['vin'])
+    vehicle_node, = graph.create(new_node)
     vehicle_node['antiTheftDevice'] = vehicle_data['antiTheftDevice']
     vehicle_node['businessUse'] = vehicle_data['businessUse']
     vehicle_node['costSymbol'] = vehicle_data['costSymbol']
@@ -239,18 +240,28 @@ def write_violation_node(graph, violation_data):
 
 def write_quote_node(graph, json_data):
     print('Writing Quote')
+
     id = json_data['event']['quote']['id']
     applicant = json_data['event']['quote']['applicant']['lastName'] +', ' + json_data['event']['quote']['applicant']['firstName']
     quote_node = graph.merge_one("Quote", "id", id)
     quote_node['applicant'] = applicant
-    if 'latitude' in json_data['event']['quote']['address']:
+    if 'latitude' not in json_data['event']['quote']['address']:
+        geo_lat, geo_lng = get_geocode.get_geocode(json_data['event']['quote']['address'])
+        json_data['event']['quote']['address']['latitude'] = geo_lat
+        json_data['event']['quote']['address']['longitude'] = geo_lng
+    '''
         quote_node['lat'] = json_data['event']['quote']['address']['latitude']
     else:
-        quote_node['lat'] = 1.01
+        geo_lat, geo_lng = get_geocode.get_geocode(json_data['event']['quote']['address'])
+        quote_node['lat'] = json_data['event']['quote']['address']['latitude']
     if 'longitude' in json_data['event']['quote']['address']:
+        json_data['event']['quote']['address']['latitude'], json_data['event']['quote']['address']['longitude'] = get_geocode.get_geocode(json_data['event']['quote']['address'])
         quote_node['lng'] = json_data['event']['quote']['address']['longitude']
     else:
         quote_node['lng'] = 1.01
+    '''
+    quote_node['lat'] = json_data['event']['quote']['address']['latitude']
+    quote_node['lng'] = json_data['event']['quote']['address']['longitude']
     quote_node.push()
     address_node = write_address_node(graph, json_data['event']['quote']['address'])
     results = graph.create_unique(Relationship(quote_node, "LOCATED_AT", address_node))
